@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+            
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Ethan Lafrenais">
+        
+        <title>Ace of Spades Clone- Francessco.us</title>
+        
+        <!-- Bootstrap v4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
+            integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Site CSS -->
+        <link href="/css/main.css" rel="stylesheet" type="text/css">
+        
+    <link href="/css/components/header-nav.css" rel="stylesheet" type="text/css">
+
+    <link href="/css/components/fullscreen-images.css" rel="stylesheet" type="text/css">
+    <link href="/css/pages/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="fullscreen-image-wrapper">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fullscreenImages.hideImage()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <img class="fullscreen-image" />
+</div>
+
+
+<nav class="header-nav-mobile-pane header-nav-mobile navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="header-nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <span class="navbar-brand">Francessco.us</span>
+
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active dropdown"><a class="nav-link dropdown-toggle" href="#"id="projects-dropdown-link" data-toggle="dropdown">Projects</a><div class="dropdown-menu" aria-labelledby="projects-dropdown-link"><a class="dropdown-item" href="/projects/discore">Discore</a><a class="dropdown-item active" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></div></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>    </ul>
+</nav>
+
+<button class="header-nav-mobile-pane-cancel"></button>
+
+<header class="header-nav-desktop-pane">
+    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+        <div class="header-nav-mobile text-center">
+            <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="header-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <span class="navbar-brand">Ace of Spades Clone</span>
+        </div>
+
+        <div class="container header-nav-desktop">
+            <a class="navbar-brand" href="/">Francessco.us</a>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active"><a class="nav-link" href="/projects/discore">Projects</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container content">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 hidden-sm-down">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link" href="/projects/discore">Discore</a></li><li class="nav-item"><a class="nav-link active" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></li>            </ul>
+        </div>
+        <div class="col-lg-10 col-md-9">
+                <h1>
+        Ace of Spades Clone
+        <small class="text-muted">November 2015 - April 2016</small>
+    </h1>
+
+    <p>
+        "Ace of Spades Clone" is my personal recreation of the game <a href="http://buildandshoot.com/">Ace of Spades Classic</a>.
+    </p>
+
+    <p>
+        Back in my senior year of high school, each of the students were allowed to work on personal projects throughout the 
+        school year. I decided to work on a single year-long project, of recreating the game: Ace of Spades Classic. 
+        Ace of Spades Classic is a sandbox team-based voxel-based first-person shooter. My aim was to recreate as much of that 
+        as I could in the time I had.
+    </p>
+
+    <p>
+        Since I'm not much of an artist, I did use some textures and recreated some models from the 
+        <a href="https://github.com/yvt/openspades">OpenSpades project</a>.
+    </p>
+
+    <h3>Details</h3>
+
+    <ul>
+        <li>Language: C#</li>
+        <li>Graphics API: OpenGL 4</li>
+        <li>Window API: GLFW 3</li>
+        <li>Game Engine: DashEngine <small>(my custom engine)</small></li>
+    </ul>
+
+    <h3>Features</h3>
+
+    <p>
+        When I had stopped working on the game in April 2016, the game featured:
+    </p>
+
+    <ul>
+        <li>Online Multiplayer up to 24 players</li>
+        <li>3 Maps</li>
+        <li>
+            2 Gamemodes
+            <ul>
+                <li>CTF <small>(capture the flag)</small></li>
+                <li>TDM <small>(team deathmatch)</small></li>
+            </ul>
+        </li>
+        <li>Each weapon/tool available in the classic game <small>(no classes though, everyone had every item)</small></li>
+    </ul>
+
+    <h3>Videos</h3>
+    <div class="card-columns video-card-columns">
+                     <div class="card">
+                 <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="card-img-top" src="https://drive.google.com/file/d/0BzdLEDU3nAKic1ZBM0lWUm11bkk/preview" allowfullscreen></iframe>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Twenty player network stress-test I did before a playtest the next day.</p>
+                </div>
+                            </div>
+                     <div class="card">
+                 <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="card-img-top" src="https://drive.google.com/file/d/0BzdLEDU3nAKiaGtjbGNseHR1NmM/preview" allowfullscreen></iframe>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Showing off some (very) exaggerated grenade physics.</p>
+                </div>
+                            </div>
+                     <div class="card">
+                 <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="card-img-top" src="https://drive.google.com/file/d/0BzdLEDU3nAKiUWprSTB3M2tibTg/preview" allowfullscreen></iframe>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Early ADS (aiming down sights) and sprinting animations.</p>
+                </div>
+                            </div>
+            </div>
+
+    <h3 style="margin-top: 15px">Screenshots</h3>
+    <div class="card-columns">
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/ctf-test.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/ctf-test.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/ctf-test.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Early CTF (capture the flag) test.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/ctf-test-networked.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/ctf-test-networked.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/ctf-test-networked.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Network test of the CTF (capture the flag) gamemode.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/block-placement.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/block-placement.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/block-placement.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Testing the ability to place down blocks.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/early-ssao.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-ssao.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-ssao.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Early screenshot of the game using SSAO (screen space ambient occlusion), the final game used AO baked right into the voxels.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/early-sunset.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-sunset.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-sunset.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/early-shadows.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-shadows.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-shadows.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Early screenshot of the engine's shadow rendering capabilities.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/early-shadows-2.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-shadows-2.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-shadows-2.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-fog.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-fog-2.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog-2.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog-2.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-fog-3.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog-3.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-fog-3.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-cave.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-cave.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-cave.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-cave-2.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-cave-2.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-cave-2.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/fixed-ao.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/fixed-ao.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/fixed-ao.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Final fixed version of the voxel AO (ambient occlusion).</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/scenic-sunset.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-sunset.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/scenic-sunset.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/friends-house.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/friends-house.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/friends-house.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">A house a friend of mine built during an early playtest.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/link.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/link.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/link.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Pixel art of Link done by a friend during a very early playtest.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/young-luna.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/young-luna.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/young-luna.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Pixel art trace of young Luna.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/deadpool.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/deadpool.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/deadpool.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Pixel art of Deadpool done by a friend.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/world-3-birds-eye-view.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-birds-eye-view.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-birds-eye-view.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Birds-eye view of the game's first map.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/world-3-scenic.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-scenic.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-scenic.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Ground-view of the first map.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/world-3-after-birds-eye-view.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-after-birds-eye-view.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-after-birds-eye-view.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">The first map after a long multiplayer playtest.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/world-3-after-ground-view.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-after-ground-view.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/world-3-after-ground-view.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Ground-view of the first map after a playtest.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/chaos-map.jpg" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map.jpg')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map.jpg')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/chaos-map-2.jpg" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map-2.jpg')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map-2.jpg')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/chaos-map-3.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map-3.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/chaos-map-3.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor.jpg" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor.jpg')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor.jpg')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">In-editor view of the game's third map.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor-top-down.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor-top-down.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/rocky-map-editor-top-down.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Top-down view of the game's third map, showing the spawn points and intel locations (for capture the flag).</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/early-network-test.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-network-test.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/early-network-test.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Very early multiplayer test.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/flashlight-networked.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight-networked.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight-networked.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Multiplayer test for flashlights.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/network-test.jpg" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test.jpg')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test.jpg')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/network-test-2.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test-2.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test-2.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/network-test-3.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test-3.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/network-test-3.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Twenty player network stress test. You can see stackoverflow.com in the background, automating 20 clients to start is much more efficient. ;)</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/flashlight.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Very early flashlight test.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/flashlight-2.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight-2.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/flashlight-2.png')"></i>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/editor-art.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/editor-art.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/editor-art.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Testing the map editor with some simple pixel art.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/derpy.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/derpy.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/derpy.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Pixel art trace of Derpy Hooves in the map editor.</p>
+                </div>
+                            </div>
+                    <div class="card">
+                <div class="fullscreenable-image-wrapper">
+                    <img class="card-img-top img-fluid" 
+                        src="/images/projects/ace-of-spades-clone/screenshots/twilight-sparkle.png" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/twilight-sparkle.png')">
+                    <i class="enlarge-icon fa fa-search-plus" aria-hidden="true" 
+                        onclick="fullscreenImages.showImage('/images/projects/ace-of-spades-clone/screenshots/twilight-sparkle.png')"></i>
+                </div>
+                                <div class="card-block">
+                    <p class="card-text">Pixel art trace of Twilight Sparkle in the map editor.</p>
+                </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">&copy; 2017 Ethan Lafrenais</span>
+    </div>
+</footer>
+
+        
+        
+        
+    
+        <!-- jQuery, Tether, and Bootstrap v4 JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+    <script src="/js/components/fullscreen-images.js"></script>
+    <script src="/js/pages/projects.js"></script>
+    </body>
+</html>

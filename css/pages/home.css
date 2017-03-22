@@ -1,0 +1,45 @@
+.cover {
+    background-color: rgba(31, 31, 31, 0.8);
+    text-shadow: none;
+    padding: 15px;
+}
+.cover p {
+    margin-bottom: 15px;
+}
+.cover p:last-child {
+    margin-bottom: 0;
+}
+.cover p span {
+    max-width: 800px;
+}
+
+a:hover img.a-icon {
+    opacity: 0.5;
+}
+
+.nav-link {
+    display: inline-block;
+}
+
+nav.nav-masthead {
+    text-align: center;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .masthead, .mastfoot, .cover-container {
+        width: 43rem;
+    }
+
+    nav.nav-masthead {
+        display: flex;
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    .cover p {
+        margin-bottom: 0;
+    }
+}
