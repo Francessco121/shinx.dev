@@ -11,38 +11,10 @@ header {
     margin-bottom: 15px;
 }
 
-h1 .small, 
-h1 small {
-    font-size: 60%;
-}
-
-h1 small {
-    display: block;
-    margin-bottom: 15px;
-}
-
 header .container {
     margin-left: 0;
     margin-right: 0;
     position: static;
-}
-
-.card-block {
-    padding: 1rem;
-}
-
-.card-columns.video-card-columns {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-}
-
-@media (min-width: 576px) {
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
 }
 
 @media (min-width: 768px) {
@@ -57,17 +29,5 @@ header .container {
     header .container {
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    h1 small {
-        display: inline;
-    }
-}
-
-@media (min-width: 992px) { 
-    .card-columns.video-card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
     }
 }

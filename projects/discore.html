@@ -23,6 +23,7 @@
 
     <link href="/css/components/fullscreen-images.css" rel="stylesheet" type="text/css">
     <link href="/css/pages/projects.css" rel="stylesheet" type="text/css">
+    <link href="/css/pages/project.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="fullscreen-image-wrapper">
@@ -41,7 +42,7 @@
     <span class="navbar-brand">Francessco.us</span>
 
     <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active dropdown"><a class="nav-link dropdown-toggle" href="#"id="projects-dropdown-link" data-toggle="dropdown">Projects</a><div class="dropdown-menu" aria-labelledby="projects-dropdown-link"><a class="dropdown-item active" href="/projects/discore">Discore</a><a class="dropdown-item" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></div></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>    </ul>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active dropdown"><a class="nav-link dropdown-toggle" href="#"id="projects-dropdown-link" data-toggle="dropdown">Projects</a><div class="dropdown-menu" aria-labelledby="projects-dropdown-link"><a class="dropdown-item" href="/projects">All Projects</a><a class="dropdown-item active" href="/projects/discore">Discore</a><a class="dropdown-item" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></div></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>    </ul>
 </nav>
 
 <button class="header-nav-mobile-pane-cancel"></button>
@@ -60,7 +61,7 @@
             <a class="navbar-brand" href="/">Francessco.us</a>
 
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active"><a class="nav-link" href="/projects/discore">Projects</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>            </ul>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item active"><a class="nav-link" href="/projects">Projects</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/Francessco121"><img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />GitHub</a></li>            </ul>
         </div>
     </nav>
 </header>
@@ -69,7 +70,7 @@
     <div class="row">
         <div class="col-lg-2 col-md-3 hidden-sm-down">
             <ul class="nav nav-pills flex-column">
-                <li class="nav-item"><a class="nav-link active" href="/projects/discore">Discore</a></li><li class="nav-item"><a class="nav-link" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></li>            </ul>
+                <li class="nav-item"><a class="nav-link" href="/projects">All Projects</a></li><li class="nav-item"><a class="nav-link active" href="/projects/discore">Discore</a></li><li class="nav-item"><a class="nav-link" href="/projects/ace-of-spades-clone">Ace of Spades Clone</a></li>            </ul>
         </div>
         <div class="col-lg-10 col-md-9">
             
@@ -85,17 +86,19 @@
     </p>
 
     <p>
-        An <strong>unofficial</strong> <a href="https://dotnet.github.io/">.NET Core</a> library for interacting with the 
-        <a href="https://discordapp.com/">Discord</a> API.
+        Discore provides an <strong>unofficial</strong>
+        <a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a> interface with 
+        <a href="https://discordapp.com/">Discord's</a> HTTP, WebSocket, and voice APIs.
     </p>
 
     <p>
-        The objective of Discore is to fully implement two parts of the Discord API: the HTTP API, and the real-time WebSocket API.
-        It's designed for creating Discord bots, as well as any application that does not require real-time data.
+        Currently, Discore is a side project of mine. I maintain and add features in my spare time, with occasional help
+        from my good friend Tristan. With the Discord API constantly changing, Discore sucks up most of my free
+        time. However, the time spent is worth it as I get to add exciting features to my own personal Discord bot.
     </p>
 
     <p>
-        You can check out Discore on GitHub <a href="https://github.com/BundledSticksInkorperated/Discore">here</a>.
+        You can check out <a href="https://github.com/BundledSticksInkorperated/Discore">Discore on GitHub here</a>.
     </p>
 
     <h3>Why?</h3>
@@ -103,7 +106,7 @@
         Back in August 2016, I had wanted to create my own Discord bot for personal use in C#. At the time, there were a couple existing
         .NET libraries for this, however (at the time) neither supported .NET Core. So, I decided to have a go at creating my own
         library! At first this project started out just for personal use, but I eventually put it up on GitHub for anyone to use,
-        and a friend of mine showed me how to upload releases to NuGet to make it easier for developers to download.  
+        and my friend Tristan showed me how to upload releases to NuGet to make it easier for developers to download and use.  
     </p>
         </div>
     </div>
@@ -112,12 +115,13 @@
 <footer class="footer">
     <div class="container">
         <span class="text-muted">&copy; 2017 Ethan Lafrenais</span>
-    </div>
+            </div>
 </footer>
 
         
         
         
+    
     
         <!-- jQuery, Tether, and Bootstrap v4 JavaScript -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 
@@ -127,7 +131,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         
+    <script src="/js/components/header-nav.js"></script>
+
     <script src="/js/components/fullscreen-images.js"></script>
-    <script src="/js/pages/projects.js"></script>
     </body>
 </html>

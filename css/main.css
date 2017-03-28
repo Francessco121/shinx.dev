@@ -1,5 +1,37 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
 
+/* Bootstrap Extensions */
+.display-responsive {
+    font-weight: 300;
+    line-height: 1.1;
+    font-size: 2.75rem;
+}
+
+@media (min-width: 576px) {
+    .display-responsive {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .display-responsive {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .display-responsive {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .display-responsive {
+        font-size: 6rem;
+    }
+}
+
+/* Main */
 html {
     font-family: 'Lato', sans-serif; 
 }
@@ -24,4 +56,11 @@ a:hover img.a-icon {
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
     background-color: #f5f5f5;
+}
+
+.mobile-footer-credit {
+    margin: 15px auto -15px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 540px; /* Match Bootstrap .container */
 }
