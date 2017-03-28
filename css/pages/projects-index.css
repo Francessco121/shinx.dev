@@ -62,3 +62,17 @@ body {
     color: white;
     text-shadow: 1px 1px black;
 }
+
+ .project-card .project-card-cover .lead {
+    font-size: 1rem;
+    margin-top: 5px;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .project-card .project-card-cover .lead {
+        margin-top: 0;
+        font-size: 1.25rem;
+    }
+}

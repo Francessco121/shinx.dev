@@ -4,7 +4,7 @@
 .display-responsive {
     font-weight: 300;
     line-height: 1.1;
-    font-size: 2.75rem;
+    font-size: 1.75rem;
 }
 
 @media (min-width: 576px) {
@@ -62,5 +62,6 @@ a:hover img.a-icon {
     margin: 15px auto -15px auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 540px; /* Match Bootstrap .container */
+    width: 100%;
+    max-width: 540px; /* Match Bootstrap .container */
 }
