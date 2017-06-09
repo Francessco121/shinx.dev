@@ -1,0 +1,33 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+header {
+    margin-bottom: 15px;
+}
+
+header .container {
+    margin-left: 0;
+    margin-right: 0;
+    position: static;
+}
+
+@media (min-width: 768px) {
+    header .container {
+        position: relative;
+    }
+
+    header {
+        margin-bottom: 60px;
+    }
+
+    header .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
