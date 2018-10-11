@@ -31,7 +31,7 @@ call git reset --mixed origin/master
 rem Commit changes
 echo Commiting...
 call git add .
-call git commit -m "Deploy from dev/%commitHash%"
+call git commit -m "Deploy from %commitHash%"
 
 rem Push
 echo "Pushing..."
