@@ -34,44 +34,6 @@ pub fn drawCover(
   } // .site-wrapper
 };
 
-/// Draws a Bootstrap 4 'cover' layout.
-pub fn drawCover(
-  brand,
-  nav,
-  heading,
-  content,
-  footer
-) {
-  return html {
-    tag 'div' with class: 'site-wrapper' {
-      tag 'div' with class: 'site-wrapper-inner' {
-        tag 'div' with class: 'cover-container' {
-          // Masthead
-          tag 'div' with class: 'masthead clearfix' {
-            tag 'div' with class: 'inner' {
-              tag 'h3' with class: 'masthead-brand' { write brand; }
-              tag 'nav' with class: 'nav nav-masthead' { write nav; }
-            }
-          }
-
-          // Content
-          tag 'div' with class: 'inner cover' {
-            tag 'h1' with class: 'cover-heading' { write heading; }
-            write content;
-          }
-
-          // Mastfoot
-          tag 'div' with class: 'mastfoot' {
-            tag 'div' with class: 'inner' {
-              tag 'p' { write footer; }
-            }
-          }
-        }
-      }
-    }
-  };
-}
-
 /// Draws a line of centered text suitable for being
 /// inside of a cover's content.
 pub fn drawContentLine(text) {
