@@ -24,9 +24,13 @@ Web.stack('head', html {
 fn drawNav() {
   return html {
     foreach i, item in NavData.nav {
-      var classAttr = item.navId == 'Home' ? 'active' : '';
-
-      tag 'a' with class: 'nav-link' .. classAttr, href: item.url {
+      tag 'a' with 
+        class: Web.makeClass({
+          'nav-link': true,
+          'active': item.navId == 'home'
+        }),
+        href: item.url
+      {
         if item.icon != null {
           tag 'img' with class: 'a-icon', src: item.icon;
         }
