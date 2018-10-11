@@ -1,0 +1,268 @@
+import '../layouts/projects.eco' as ProjectsLayout;
+
+Web.inherit(ProjectsLayout, {
+  title: 'Ace of Spades Clone',
+  subNavId: 'ace-of-spades-clone'
+});
+
+var screenshotsDir = '/images/projects/ace-of-spades-clone/screenshots/';
+
+var screenshots = [
+  { 
+    url: 'ctf-test.png',
+    desc: 'Early CTF (capture the flag) test.'
+  },
+  { 
+    url: 'ctf-test-networked.png',
+    desc: 'Network test of the CTF (capture the flag) gamemode.'
+  },
+  { 
+    url: 'block-placement.png',
+    desc: 'Testing the ability to place down blocks.'
+  },
+  { 
+    url: 'early-ssao.png', 
+    desc: 'Early screenshot of the game using SSAO (screen space ambient occlusion),'
+      .. ' the final game used AO baked right into the voxels.' 
+  },
+  { url: 'early-sunset.png' },
+  { 
+    url: 'early-shadows.png',
+    desc: 'Early screenshot of the engine\'s shadow rendering capabilities.'
+  },
+  { url: 'early-shadows-2.png' },
+  { url: 'scenic-fog.png' },
+  { url: 'scenic-fog-2.png' },
+  { url: 'scenic-fog-3.png' },
+
+  { url: 'scenic-cave.png' },
+  { url: 'scenic-cave-2.png' },
+  { 
+    url: 'fixed-ao.png',
+    desc: 'Final fixed version of the voxel AO (ambient occlusion).'
+  },
+  { url: 'scenic-sunset.png' },
+  { 
+    url: 'friends-house.png',
+    desc: 'A house a friend of mine built during an early playtest.'
+  },
+  { 
+    url: 'link.png',
+    desc: 'Pixel art of Link done by a friend during a very early playtest.'
+  },
+  { 
+    url: 'young-luna.png',
+    desc: 'Pixel art trace of young Luna.'
+  },
+  { 
+    url: 'deadpool.png',
+    desc: 'Pixel art of Deadpool done by a friend.'
+  },
+  { 
+    url: 'world-3-birds-eye-view.png',
+    desc: 'Birds-eye view of the game\'s first map.'
+  },
+  { 
+    url: 'world-3-scenic.png',
+    desc: 'Ground-view of the first map.'
+  },
+  { 
+    url: 'world-3-after-birds-eye-view.png',
+    desc: 'The first map after a long multiplayer playtest.'
+  },
+  { 
+    url: 'world-3-after-ground-view.png',
+    desc: 'Ground-view of the first map after a playtest.'
+  },
+  { url: 'chaos-map.jpg' },
+  { url: 'chaos-map-2.jpg' },
+  { url: 'chaos-map-3.png' },
+  { 
+    url: 'rocky-map-editor.jpg',
+    desc: 'In-editor view of the game\'s third map.'
+  },
+  { 
+    url: 'rocky-map-editor-top-down.png',
+    desc: 'Top-down view of the game\'s third map, showing the spawn points and intel locations'
+      .. ' (for capture the flag).'
+  },
+  { 
+    url: 'early-network-test.png',
+    desc: 'Very early multiplayer test.'
+  },
+  { 
+    url: 'flashlight-networked.png',
+    desc: 'Multiplayer test for flashlights.'
+  },
+  { url: 'network-test.jpg' },
+  { url: 'network-test-2.png' },
+  { 
+    url: 'network-test-3.png',
+    desc: 'Twenty player network stress test. You can see stackoverflow.com in the background,'
+      .. ' automating 20 clients to start is much more efficient. ;)'
+  },
+  { 
+    url: 'flashlight.png',
+    desc: 'Very early flashlight test.'
+  },
+  { url: 'flashlight-2.png' },
+  { 
+    url: 'editor-art.png',
+    desc: 'Testing the map editor with some simple pixel art.'
+  },
+  { 
+    url: 'derpy.png',
+    desc: 'Pixel art trace of Derpy Hooves in the map editor.'
+  },
+  { 
+    url: 'twilight-sparkle.png',
+    desc: 'Pixel art trace of Twilight Sparkle in the map editor.'
+  }
+];
+
+var videos = [
+  { 
+    url: 'https://drive.google.com/file/d/0BzdLEDU3nAKic1ZBM0lWUm11bkk/preview',
+    desc: 'Twenty player network stress-test I did before a playtest the next day.'
+  },
+  {
+    url: 'https://drive.google.com/file/d/0BzdLEDU3nAKiaGtjbGNseHR1NmM/preview',
+    desc: 'Showing off some (very) exaggerated grenade physics.'
+  },
+  {
+    url: 'https://drive.google.com/file/d/0BzdLEDU3nAKiUWprSTB3M2tibTg/preview',
+    desc: 'Early ADS (aiming down sights) and sprinting animations.'
+  }
+];
+
+fn drawVideos() {
+  return html {
+    tag 'h3' { write 'Videos'; }
+
+    write `
+      <small class="hidden-md-up" style="display: inline-block; margin-bottom: 5px">
+        Note: Embedded videos may not play on mobile, open them in a separate tab to view.
+      </small>
+    `;
+
+    tag 'div' with class: 'card-columns video-card-columns' {
+      foreach i, video in videos {
+        tag 'div' with class: 'card' {
+          tag 'div' with class: 'embed-responsive embed-responsive-16by9' {
+            tag 'iframe' with
+              class: video.desc == null ? 'card-img' : 'card-img-top',
+              src: video.url,
+              allowfullscreen: true
+            { }
+          }
+
+          if video.desc != null {
+            tag 'div' with class: 'card-block' {
+              tag 'p' with class: 'card-text' {
+                write video.desc;
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+}
+
+var drawScreenshots = fn() => html {
+  write `<h3 style="margin-top: 15px">Screenshots</h3>`;
+
+  tag 'div' with class: 'card-columns' {
+    foreach i, screenshot in screenshots {
+      tag 'div' with class: 'card' {
+        tag 'div' with class: 'fullscreenable-image-wrapper' {
+          var imgClasses = Web.makeClass({
+            'card-img': screenshot.desc == null,
+            'card-img-top': screenshot.desc != null,
+            'img-fluid': true
+          });
+
+          var imgUrl = screenshotsDir .. screenshot.url;
+
+          var onClick = 'fullscreenImages.showImage(\'' .. imgUrl .. '\')';
+
+          tag 'img' with
+            class: imgClasses,
+            src: imgUrl,
+            onclick: onClick;
+
+          tag 'i' with 
+            class: 'enlarge-icon fa fa-search-plus', 
+            'aria-hidden': 'true',
+            onclick: onClick
+          { }
+        }
+
+        if screenshot.desc != null {
+          tag 'div' with class: 'card-block' {
+            tag 'p' with class: 'card-text' {
+              write screenshot.desc;
+            } 
+          }
+        }
+      }
+    }
+  }
+};
+
+
+Web.view(fn() => html {
+  write `
+    <h1>
+      Ace of Spades Clone
+      <small class="text-muted">November 2015 - April 2016</small>
+    </h1>
+
+    <p>
+      "Ace of Spades Clone" is my personal recreation of the game <a href="http://buildandshoot.com/">Ace of Spades Classic</a>.
+    </p>
+
+    <p>
+      Back in my senior year of high school, each of the students were allowed to work on personal projects throughout the 
+      school year. I decided to work on a single year-long project, of recreating the game: Ace of Spades Classic. 
+      Ace of Spades Classic is a sandbox team-based voxel-based first-person shooter. My aim was to recreate as much of that 
+      as I could in the time I had.
+    </p>
+
+    <p>
+      Since I'm not much of an artist, I did use some textures and recreated some models from the 
+      <a href="https://github.com/yvt/openspades">OpenSpades project</a>.
+    </p>
+
+    <h3>Details</h3>
+
+    <ul>
+      <li>Language: C#</li>
+      <li>Graphics API: OpenGL 4</li>
+      <li>Window API: GLFW 3</li>
+      <li>Game Engine: DashEngine <small>(my custom engine)</small></li>
+    </ul>
+
+    <h3>Features</h3>
+
+    <p>
+      When I had stopped working on the game in April 2016, the game featured:
+    </p>
+
+    <ul>
+      <li>Online Multiplayer up to 24 players</li>
+      <li>3 Maps</li>
+      <li>
+        2 Gamemodes
+        <ul>
+          <li>CTF <small>(capture the flag)</small></li>
+          <li>TDM <small>(team deathmatch)</small></li>
+        </ul>
+      </li>
+      <li>Each weapon/tool available in the classic game <small>(no classes though, everyone had every item)</small></li>
+    </ul>
+  `;
+
+  write drawVideos();
+  write drawScreenshots();
+});

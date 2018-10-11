@@ -1,0 +1,57 @@
+import 'data/nav.eco' as NavData;
+import 'components/cover.eco' as Cover;
+import 'layouts/base.eco' as BaseLayout;
+
+Web.inherit(BaseLayout, {
+  title: 'Home'
+});
+
+Web.stack('head', html {
+  tag 'link' with href: '/css/components/cover.css', rel: 'stylesheet', type: 'text/css';
+  tag 'link' with href: '/css/pages/home.css', rel: 'stylesheet', type: 'text/css';
+
+  write `
+    <style>
+      body {
+        /* Footer is not present here */
+        margin-bottom: 0px;
+      }
+    </style>
+  `;
+});
+
+/// Draws a set of a-tags for each navigation item
+fn drawNav() {
+  return html {
+    foreach i, item in NavData.nav {
+      var classAttr = item.navId == 'Home' ? 'active' : '';
+
+      tag 'a' with class: 'nav-link' .. classAttr, href: item.url {
+        if item.icon != null {
+          tag 'img' with class: 'a-icon', src: item.icon;
+        }
+
+        write item.text;
+      }
+    }
+  };
+}
+
+Web.view(fn() => html {
+  write Cover.drawCover(
+    brand: 'Francessco.us',
+    nav: drawNav(),
+    heading: 'Hi There!',
+    content: html {
+      write Cover.drawContentLine(`
+        I'm Ethan Lafrenais, a programmer who is in love with computers!
+      `);
+
+      write Cover.drawContentLine(`
+        I love developing games and other cool applications,
+        <a href="/projects/">check them out here</a>!
+      `);
+    },
+    footer: `&copy; 2018 Ethan Lafrenais`
+  );
+});

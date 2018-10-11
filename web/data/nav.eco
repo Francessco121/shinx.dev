@@ -1,0 +1,34 @@
+pub var nav = [
+  {
+    navId: "home",
+    url: "/",
+    text: "Home"
+  },
+  {
+    navId: "projects",
+    url: "/projects/",
+    text: "Projects",
+    sub: [
+      {
+        navId: "projects",
+        url: "/projects/",
+        text: "All Projects"
+      },
+      {
+        navId: "discore",
+        url: "/projects/discore",
+        text: "Discore"
+      },
+      {
+        navId: "ace-of-spades-clone",
+        url: "/projects/ace-of-spades-clone",
+        text: "Ace of Spades Clone"
+      }
+    ]
+  },
+  {
+    url: "https://github.com/Francessco121",
+    text: "GitHub",
+    icon: "/images/GitHub-Mark-Light-32px.png"
+  }
+];

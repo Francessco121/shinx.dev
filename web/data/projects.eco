@@ -1,0 +1,19 @@
+pub var projects = [
+  {
+    name: "Discore",
+    description: ".NET Standard interface for the Discord API",
+    url: "/projects/discore",
+    backgroundColor: "rgb(114, 137, 218)", // Discord Blurple
+    backgroundImage: "/images/projects/discore/discord-logo.png",
+    overlayColor: "rgba(0, 0, 0, 0.5)"
+  },
+  {
+    name: "Ace of Spades Clone",
+    description: "Recreation of Ace of Spades Classic",
+    url: "/projects/ace-of-spades-clone",
+    backgroundColor: null,
+    backgroundImage: "/images/projects/ace-of-spades-clone/card-background.png",
+    backgroundSize: "cover",
+    overlayColor: "rgba(0, 0, 0, 0.5)"
+  }
+];

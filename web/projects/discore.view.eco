@@ -1,0 +1,43 @@
+import '../layouts/projects.eco' as ProjectsLayout;
+
+Web.inherit(ProjectsLayout, {
+  title: 'Discore',
+  subNavId: 'discore'
+});
+
+Web.view(fn() => `
+  <h1>
+    Discore
+    <small class="text-muted">August 2016 - Now</small>
+  </h1>
+
+  <p>
+    <a href="https://github.com/BundledSticksInkorperated/Discore">
+        <img src="https://img.shields.io/github/release/BundledSticksInkorperated/Discore.svg?style=flat-square">
+    </a>
+  </p>
+
+  <p>
+    Discore provides an <strong>unofficial</strong>
+    <a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a> interface with 
+    <a href="https://discordapp.com/">Discord's</a> HTTP, WebSocket, and voice APIs.
+  </p>
+
+  <p>
+    Currently, Discore is a side project of mine. I maintain and add features in my spare time, with occasional help
+    from my good friend Tristan. With the Discord API constantly changing, Discore sucks up most of my free
+    time. However, the time spent is worth it as I get to add exciting features to my own personal Discord bot.
+  </p>
+
+  <p>
+    You can check out <a href="https://github.com/BundledSticksInkorperated/Discore">Discore on GitHub here</a>.
+  </p>
+
+  <h3>Why?</h3>
+  <p>
+    Back in August 2016, I had wanted to create my own Discord bot for personal use in C#. At the time, there were a couple existing
+    .NET libraries for this, however (at the time) neither supported .NET Core. So, I decided to have a go at creating my own
+    library! At first this project started out just for personal use, but I eventually put it up on GitHub for anyone to use,
+    and my friend Tristan showed me how to upload releases to NuGet to make it easier for developers to download and use.  
+  </p>
+`);

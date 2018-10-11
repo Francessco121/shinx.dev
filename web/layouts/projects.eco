@@ -1,0 +1,63 @@
+import '../data/nav.eco' as NavData;
+import 'main_base.eco' as MainBaseLayout;
+
+Web.inherit(MainBaseLayout, {
+  title: Web.layout('title'),
+  navId: 'projects',
+  subNavId: Web.layout('subNavId')
+});
+
+Web.stack('head', html {
+  tag 'link' with href: '/css/components/fullscreen-images.css', rel: 'stylesheet', type: 'text/css';
+  tag 'link' with href: '/css/pages/projects.css', rel: 'stylesheet', type: 'text/css';
+  tag 'link' with href: '/css/pages/project.css', rel: 'stylesheet', type: 'text/css';
+});
+
+Web.stack('beforeView', html {
+  write `
+    <div class="fullscreen-image-wrapper">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+          onclick="fullscreenImages.hideImage()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <img class="fullscreen-image" />
+    </div>
+  `;
+});
+
+Web.stack('footerJs', html {
+  tag 'script' with src: '/js/components/fullscreen-images.js' { }
+});
+
+fn drawSideNav() {
+  var subNavId = Web.layout('subNavId');
+
+  return html {
+    foreach i, project in NavData.nav[1].sub {
+      tag 'li' with class: 'nav-item' {
+        tag 'a' with 
+          class: 'nav-link' .. (project.navId == subNavId ? ' active' : ''),
+          href: project.url
+        {
+          write project.text;
+        }
+      }
+    }
+  };
+}
+
+Web.view(fn() => html {
+  tag 'div' with class: 'container content' {
+    tag 'div' with class: 'row' {
+      tag 'div' with class: 'col-lg-2 col-md-3 hidden-sm-down' {
+        tag 'ul' with class: 'nav nav-pills flex-column' {
+          write drawSideNav();
+        }
+      }
+
+      tag 'div' with class: 'col-lg-10 col-md-9' {
+        write Web.drawView();
+      }
+    }
+  }
+});
