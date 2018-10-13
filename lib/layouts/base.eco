@@ -1,4 +1,6 @@
 Web.view(fn() => html {
+  var model = Web.layout();
+
   <: '<!doctype html>';
 
   @ 'html' :: lang: 'en' {
@@ -7,7 +9,15 @@ Web.view(fn() => html {
       @ 'meta' :: name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no';
       @ 'meta' :: name: 'author', content: 'Ethan Lafrenais';
 
-      @ 'title' { <: 'Francessco.us'; }
+      @ 'title' {
+        var title = model == null ? null : model['title'];
+
+        if title != null {
+          <: title .. ' - ';
+        }
+        
+        <: 'Francessco.us';
+      }
 
       @ 'link' :: href: '/css/base.css', rel: 'stylesheet', type: 'text/css';
 
