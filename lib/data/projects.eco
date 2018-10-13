@@ -2,7 +2,7 @@ pub var projects = [
   {
     id: 'eco',
     name: 'Eco',
-    description: 'A programming language for generating static HTML',
+    description: 'A programming language for generating static websites',
     url: 'https://github.com/Francessco121/eco',
     card: {
       backgroundImage: {
