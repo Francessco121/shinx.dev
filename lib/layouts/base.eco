@@ -1,9 +1,5 @@
 Web.view(html {
-  var model = Web.getModel();
-
-  if model == null {
-    model = {};
-  }
+  var model = Web.getModel() ?? {};
 
   <: '<!doctype html>';
 

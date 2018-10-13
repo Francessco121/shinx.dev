@@ -1,11 +1,7 @@
 import '../data/nav.eco' as NavData;
 import '../data/projects.eco' as ProjectsData;
 
-var model = Web.getModel();
-
-if model == null {
-  model = {};
-}
+var model = Web.getModel() ?? {};
 
 Web.inherit('base.eco', {
   title: model['title']
