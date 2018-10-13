@@ -4,93 +4,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="author" content="Ethan Lafrenais" />
 <title>
-Home - Francessco.us
+Francessco.us
 </title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
-<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/css/components/cover.css" rel="stylesheet" type="text/css" />
-<link href="/css/pages/home.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/css/home.css" rel="stylesheet" type="text/css" />
+<link href="/css/project-card.css" rel="stylesheet" type="text/css" />
 
-    <style>
-      body {
-        /* Footer is not present here */
-        margin-bottom: 0px;
-      }
-    </style>
-  
 </head>
 <body>
-<div class="site-wrapper">
-<div class="site-wrapper-inner">
-<div class="cover-container">
-<div class="masthead clearfix">
-<div class="inner">
-<h3 class="masthead-brand">
+<div class="body-container">
+<div class="body-view-wrapper">
+<div class="background">
+
+</div>
+<div class="landing-block">
+<div class="container">
+<h1 class="title">
 Francessco.us
-</h3>
-<nav class="nav nav-masthead">
-<a class="nav-link active" href="/">
-Home
-</a>
-<a class="nav-link" href="/projects/">
-Projects
-</a>
-<a class="nav-link" href="https://github.com/Francessco121">
-<img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />
-GitHub
-</a>
-
-</nav>
-
-</div>
-
-</div>
-<div class="inner cover">
-<h1 class="cover-heading">
-Hi There!
 </h1>
-<p class="lead">
-<span class="text-justify">
-
-        I'm Ethan Lafrenais, a programmer who is in love with computers!
-      
-</span>
-
-</p>
-<p class="lead">
-<span class="text-justify">
-
-        I love developing games and other cool applications,
-        <a href="/projects/">check them out here</a>!
-      
-</span>
-
-</p>
+<div class="content">
+<div class="content-card">
+<h2 class="heading">
+Hi there, I'm Ethan Lafrenais!
+</h2>
+<div class="line">
+I am a Software Developer who loves to learn and build projects to solve problems!
+</div>
 
 </div>
-<div class="mastfoot">
-<div class="inner">
-<p>
+<div class="landing-buttons">
+<a class="landing-button" href="https://github.com/Francessco121">
+<img src="/images/GitHub-Mark-Light-32px.png" />
+<span>
+GitHub
+</span>
+
+</a>
+<a class="landing-button" href="#projects">
+<span>
+View Projects
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="content-block">
+<div class="container">
+<h1 class="projects-title" id="projects">
+My Projects
+</h1>
+<div class="project-card" style="">
+<div class="project-card-background" style="background-image: url('/images/projects/eco/card-background.png'); background-size: cover;">
+<a class="project-card-cover" href="https://github.com/Francessco121/eco">
+<span class="project-card-title">
+Eco
+</span>
+<span class="project-card-description">
+A programming language for generating static HTML
+</span>
+
+</a>
+
+</div>
+
+</div>
+<div class="project-card" style="">
+<div class="project-card-background" style="background-image: url('/images/projects/ace-of-spades-clone/card-background.png'); background-size: cover;">
+<a class="project-card-cover" href="/projects/ace-of-spades-clone">
+<span class="project-card-title">
+Ace of Spades Clone
+</span>
+<span class="project-card-description">
+A recreation of the game "Ace of Spades Classic"
+</span>
+
+</a>
+
+</div>
+
+</div>
+<div class="project-card" style="">
+<div class="project-card-background" style="background-image: url('/images/projects/hlml-toolkit/card-background.png'); background-size: cover;">
+<a class="project-card-cover" href="https://github.com/Francessco121/HlmlToolkit">
+<span class="project-card-title">
+HLML Toolkit
+</span>
+<span class="project-card-description">
+A set of tools and languages for playing the game "Much Assembly Required"
+</span>
+
+</a>
+
+</div>
+
+</div>
+<div class="project-card" style="background-color: rgb(114, 137, 218);">
+<div class="project-card-background" style="background-image: url('/images/projects/discore/discord-logo.png');">
+<a class="project-card-cover" href="/projects/discore">
+<span class="project-card-title">
+Discore
+</span>
+<span class="project-card-description">
+A .NET Standard interface for the Discord API designed for creating bots
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<footer class="footer">
+<div class="footer-container">
+<span>
 &copy; 2018 Ethan Lafrenais
-</p>
+</span>
 
 </div>
 
-</div>
+</footer>
 
 </div>
-
-</div>
-
-</div>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
-
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
-
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+<script src="/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous">
 
 </script>
 

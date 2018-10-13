@@ -6,150 +6,203 @@
 <title>
 Francessco.us
 </title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
-<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/css/components/header-nav.css" rel="stylesheet" type="text/css" />
-<link href="/css/components/fullscreen-images.css" rel="stylesheet" type="text/css" />
-<link href="/css/pages/projects.css" rel="stylesheet" type="text/css" />
-<link href="/css/pages/project.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/css/project-base.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
-
-    <div class="fullscreen-image-wrapper">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
-          onclick="fullscreenImages.hideImage()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <img class="fullscreen-image" />
-    </div>
-  <nav class="header-nav-mobile-pane header-nav-mobile navbar navbar-inverse bg-inverse">
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="header-nav">
-<span class="navbar-toggler-icon">
+<div class="body-container">
+<div class="body-view-wrapper">
+<div id="mobile-nav-pane">
+<nav>
+<button class="mobile-menu-button" data-toggle="mobile-nav-pane">
+<span>
 
 </span>
 
 </button>
-<span class="navbar-brand">
+<div class="mobile-header-title">
+<a href="/">
 Francessco.us
-</span>
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="/">
-<img class="a-icon" />
-Home
-</a>
-
-</li>
-<li class="nav-item active dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="projects-dropdown-link" data-toggle="dropdown">
-<img class="a-icon" />
-Projects
-</a>
-<div class="dropdown-menu" area-labelledby="projects-dropdown-link">
-<a class="dropdown-item" href="/projects/">
-
-</a>
-<a class="dropdown-item" href="/projects/discore">
-
-</a>
-<a class="dropdown-item" href="/projects/ace-of-spades-clone">
-
 </a>
 
 </div>
+<div class="scroll-section">
+<ul class="mobile-header-nav-links">
+<li>
+<a href="/">
+<span>
+Home
+</span>
+
+</a>
 
 </li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/Francessco121">
-<img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />
-GitHub
+<li>
+<a href="/#projects">
+<span>
+Projects
+</span>
+
+</a>
+
+</li>
+<li>
+<a href="https://github.com/Francessco121">
+<img src="/images/GitHub-Mark-Light-32px.png" />
+<span>
+GitHub Profile
+</span>
+
 </a>
 
 </li>
 
 </ul>
+<div class="mobile-header-title">
+<a href="/">
+Projects
+</a>
+
+</div>
+<ul class="mobile-header-nav-links">
+<li>
+<a href="https://github.com/Francessco121/eco" class="">
+<span>
+Eco
+</span>
+
+</a>
+
+</li>
+<li>
+<a href="/projects/ace-of-spades-clone" class="">
+<span>
+Ace of Spades Clone
+</span>
+
+</a>
+
+</li>
+<li>
+<a href="https://github.com/Francessco121/HlmlToolkit" class="">
+<span>
+HLML Toolkit
+</span>
+
+</a>
+
+</li>
+<li>
+<a href="/projects/discore" class="active">
+<span>
+Discore
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
 
 </nav>
-<button class="header-nav-mobile-pane-cancel">
-
-</button>
-<header class="header-nav-desktop-pane">
-<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
-<div class="header-nav-mobile text-center">
-<button class="header-toggler navbar-toggler-left" type="button" data-toggle="header-nav">
-<span class="navbar-toggler-icon">
-
-</span>
-
-</button>
-<span class="navbar-brand">
-null
-</span>
 
 </div>
-<div class="container header-nav-desktop">
-<a class="navbar-brand" href="/">
+<div id="mobile-nav-pane-cancel">
+
+</div>
+<header>
+<nav>
+<button class="mobile-menu-button" data-toggle="mobile-nav-pane">
+<span>
+
+</span>
+
+</button>
+<div class="header-title">
+<a href="/">
 Francessco.us
 </a>
-<ul class="navbar-nav mr-auto">
-<li class="nav-item">
-<a class="nav-link" href="/">
-<img class="a-icon" />
+
+</div>
+<div class="mobile-header-title">
+Discore
+</div>
+<ul class="header-nav-links">
+<li>
+<a href="/">
+<span>
 Home
+</span>
+
 </a>
 
 </li>
-<li class="nav-item active">
-<a class="nav-link" href="/projects/">
-<img class="a-icon" />
+<li>
+<a href="/#projects">
+<span>
 Projects
+</span>
+
 </a>
 
 </li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/Francessco121">
-<img class="a-icon" src="/images/GitHub-Mark-Light-32px.png" />
-GitHub
+<li>
+<a href="https://github.com/Francessco121">
+<img src="/images/GitHub-Mark-Light-32px.png" />
+<span>
+GitHub Profile
+</span>
+
 </a>
 
 </li>
 
 </ul>
-
-</div>
 
 </nav>
 
 </header>
-<div class="container content">
-<div class="row">
-<div class="col-lg-2 col-md-3 hidden-sm-down">
-<ul class="nav nav-pills flex-column">
-<li class="nav-item">
-<a class="nav-link" href="/projects/">
+<div class="project-content-wrapper">
+<nav class="side-nav">
+<ul>
+<li>
+<a href="/#projects">
 All Projects
 </a>
 
 </li>
-<li class="nav-item">
-<a class="nav-link active" href="/projects/discore">
-Discore
+<li>
+<a href="https://github.com/Francessco121/eco" class="">
+Eco
 </a>
 
 </li>
-<li class="nav-item">
-<a class="nav-link" href="/projects/ace-of-spades-clone">
+<li>
+<a href="/projects/ace-of-spades-clone" class="">
 Ace of Spades Clone
+</a>
+
+</li>
+<li>
+<a href="https://github.com/Francessco121/HlmlToolkit" class="">
+HLML Toolkit
+</a>
+
+</li>
+<li>
+<a href="/projects/discore" class="active">
+Discore
 </a>
 
 </li>
 
 </ul>
 
-</div>
-<div class="col-lg-10 col-md-9">
+</nav>
+<div>
 
   <h1>
     Discore
@@ -157,33 +210,39 @@ Ace of Spades Clone
   </h1>
 
   <p>
-    <a href="https://github.com/BundledSticksInkorperated/Discore">
-        <img src="https://img.shields.io/github/release/BundledSticksInkorperated/Discore.svg?style=flat-square">
+    <a href="https://github.com/BundledSticksInkorperated/Discore" class="shield">
+      <img src="https://img.shields.io/badge/source-GitHub-black.svg?style=flat-square&logo=github" />
+    </a>
+
+    <a href="https://github.com/BundledSticksInkorperated/Discore/releases" class="shield">
+      <img src="https://img.shields.io/github/release/BundledSticksInkorperated/Discore.svg?style=flat-square" />
+    </a>
+
+    <a href="https://github.com/BundledSticksInkorperated/Discore/blob/master/LICENSE.md" class="shield">
+      <img src="https://img.shields.io/github/license/BundledSticksInkorperated/Discore.svg?style=flat-square" />
     </a>
   </p>
 
   <p>
-    Discore provides an <strong>unofficial</strong>
-    <a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a> interface with 
-    <a href="https://discordapp.com/">Discord's</a> HTTP, WebSocket, and voice APIs.
+    Discore is a light-weight 
+    <a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a>
+    library designed for creating <a href="https://discordapp.com/">Discord</a> bots.
   </p>
 
   <p>
-    Currently, Discore is a side project of mine. I maintain and add features in my spare time, with occasional help
-    from my good friend Tristan. With the Discord API constantly changing, Discore sucks up most of my free
-    time. However, the time spent is worth it as I get to add exciting features to my own personal Discord bot.
+    Currently, Discore is a side project of mine. I maintain and add features occasionally in my spare time. The project is
+    currently in an 'essentially complete' state, so most work is just maintenance until Discord changes their API again.
   </p>
 
   <p>
     You can check out <a href="https://github.com/BundledSticksInkorperated/Discore">Discore on GitHub here</a>.
   </p>
 
-  <h3>Why?</h3>
+  <h3>Why another .NET Discord Library?</h3>
   <p>
     Back in August 2016, I had wanted to create my own Discord bot for personal use in C#. At the time, there were a couple existing
     .NET libraries for this, however (at the time) neither supported .NET Core. So, I decided to have a go at creating my own
-    library! At first this project started out just for personal use, but I eventually put it up on GitHub for anyone to use,
-    and my friend Tristan showed me how to upload releases to NuGet to make it easier for developers to download and use.  
+    library! At first this project started out just for personal use, but I eventually put it up on GitHub and NuGet for anyone to use.  
   </p>
 
 </div>
@@ -192,27 +251,20 @@ Ace of Spades Clone
 
 </div>
 <footer class="footer">
-<div class="container">
-<span class="text-muted">
+<div class="footer-container">
+<span>
 &copy; 2018 Ethan Lafrenais
 </span>
 
 </div>
 
 </footer>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
+
+</div>
+<script src="/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous">
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
-
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
-
-</script>
-<script src="/js/components/header-nav.js">
-
-</script>
-<script src="/js/components/fullscreen-images.js">
+<script src="/js/components/mobile-nav-pane.js">
 
 </script>
 
