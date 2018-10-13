@@ -1,8 +1,7 @@
 import 'package:francessco_us/components/project_card.eco' as ProjectCard;
 import 'package:francessco_us/data/projects.eco' as ProjectsData;
-import 'package:francessco_us/layouts/base.eco' as Layout;
 
-Web.inherit(Layout);
+Web.inherit('package:francessco_us/layouts/base.eco');
 
 Web.stack('css', html {
   @ 'link' :: href: '/css/home.css', rel: 'stylesheet', type: 'text/css';
@@ -10,7 +9,7 @@ Web.stack('css', html {
   <: ProjectCard.drawCssDependencies();
 });
 
-Web.view(fn() => html {
+Web.view(html {
   @ 'div' :: class: 'background' { }
 
   @ 'div' :: class: 'landing-block' {

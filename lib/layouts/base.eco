@@ -1,5 +1,9 @@
-Web.view(fn() => html {
-  var model = Web.layout();
+Web.view(html {
+  var model = Web.getModel();
+
+  if model == null {
+    model = {};
+  }
 
   <: '<!doctype html>';
 
@@ -10,7 +14,7 @@ Web.view(fn() => html {
       @ 'meta' :: name: 'author', content: 'Ethan Lafrenais';
 
       @ 'title' {
-        var title = model == null ? null : model['title'];
+        var title = model['title'];
 
         if title != null {
           <: title .. ' - ';

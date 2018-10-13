@@ -1,7 +1,6 @@
 import 'package:francessco_us/data/projects/ace-of-spades-clone.eco' as Data;
-import 'package:francessco_us/layouts/project_base.eco' as Layout;
 
-Web.inherit(Layout, fn() => {
+Web.inherit('package:francessco_us/layouts/project_base.eco', {
   title: 'Ace of Spades Clone',
   projectId: 'aos'
 });
@@ -85,7 +84,7 @@ fn drawScreenshots() => html {
   } // .card-columns
 };
 
-Web.view(fn() => html {
+Web.view(html {
   <: `
     <h1>
       Ace of Spades Clone

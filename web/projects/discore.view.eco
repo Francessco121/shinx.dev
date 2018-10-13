@@ -1,11 +1,9 @@
-import 'package:francessco_us/layouts/project_base.eco' as Layout;
-
-Web.inherit(Layout, fn() => {
+Web.inherit('package:francessco_us/layouts/project_base.eco', {
   title: 'Discore',
   projectId: 'discore'
 });
 
-Web.view(fn() => `
+Web.view(`
   <h1>
     Discore
     <small class="text-muted">August 2016 - Now</small>
