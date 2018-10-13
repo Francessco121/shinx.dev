@@ -1,0 +1,27 @@
+pub fn drawCssDependencies() => html {
+  @ 'link' :: href: '/css/project-card.css', rel: 'stylesheet', type: 'text/css';
+};
+
+pub fn drawProjectCard(project) => html {
+  var card = project.card;
+
+  var cardStyle = Web.makeStyle({
+    'background-color': card.backgroundColor
+  });
+
+  var backgroundStyle = card.backgroundImage == null
+    ? null
+    :  Web.makeStyle({
+      'background-image': "url('" .. card.backgroundImage.url .. "')",
+      'background-size': card.backgroundImage.size
+    });
+
+  @ 'div' :: class: 'project-card', style: cardStyle {
+    @ 'div' :: class: 'project-card-background', style: backgroundStyle {
+      @ 'a' :: class: 'project-card-cover', href: project.url {
+        @ 'span' :: class: 'project-card-title' { <: project.name; }
+        @ 'span' :: class: 'project-card-description' { <: project.description; }
+      }
+    } // .project-card-background
+  } // .project-card
+};

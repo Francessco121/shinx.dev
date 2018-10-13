@@ -1,0 +1,15 @@
+pub var nav = [
+  {
+    url: '/',
+    text: 'Home'
+  },
+  {
+    url: '/#projects',
+    text: 'Projects'
+  },
+  {
+    url: 'https://github.com/Francessco121',
+    text: 'GitHub Profile',
+    iconUrl: '/images/GitHub-Mark-Light-32px.png'
+  }
+];

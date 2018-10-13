@@ -106,6 +106,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
+  cli_repl:
+    dependency: transitive
+    description:
+      name: cli_repl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0+1"
   code_builder:
     dependency: transitive
     description:
@@ -190,6 +197,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.3+3"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.0"
   http_multi_server:
     dependency: transitive
     description:
@@ -267,6 +281,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  package_resolver:
+    dependency: transitive
+    description:
+      name: package_resolver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
   path:
     dependency: transitive
     description:
@@ -323,6 +344,22 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0+1"
+  sass:
+    dependency: transitive
+    description:
+      name: sass
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.14.2"
+  sass_builder:
+    dependency: "direct dev"
+    description:
+      path: "."
+      ref: e76da918cf27bf14e324b2343ff4f7ee38e98693
+      resolved-ref: e76da918cf27bf14e324b2343ff4f7ee38e98693
+      url: "https://github.com/dart-league/sass_builder.git"
+    source: git
+    version: "2.1.2-dev"
   scratch_space:
     dependency: transitive
     description:
@@ -393,6 +430,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1"
+  tuple:
+    dependency: transitive
+    description:
+      name: tuple
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   typed_data:
     dependency: transitive
     description:

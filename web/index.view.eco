@@ -1,61 +1,52 @@
-import 'data/nav.eco' as NavData;
-import 'components/cover.eco' as Cover;
-import 'layouts/base.eco' as BaseLayout;
+import 'package:francessco_us/components/project_card.eco' as ProjectCard;
+import 'package:francessco_us/data/projects.eco' as ProjectsData;
+import 'package:francessco_us/layouts/base.eco' as Layout;
 
-Web.inherit(BaseLayout, {
-  title: 'Home'
+Web.inherit(Layout);
+
+Web.stack('css', html {
+  @ 'link' :: href: '/css/home.css', rel: 'stylesheet', type: 'text/css';
+
+  <: ProjectCard.drawCssDependencies();
 });
-
-Web.stack('head', html {
-  tag 'link' with href: '/css/components/cover.css', rel: 'stylesheet', type: 'text/css';
-  tag 'link' with href: '/css/pages/home.css', rel: 'stylesheet', type: 'text/css';
-
-  write `
-    <style>
-      body {
-        /* Footer is not present here */
-        margin-bottom: 0px;
-      }
-    </style>
-  `;
-});
-
-/// Draws a set of a-tags for each navigation item
-fn drawNav() {
-  return html {
-    foreach i, item in NavData.nav {
-      tag 'a' with 
-        class: Web.makeClass({
-          'nav-link': true,
-          'active': item.navId == 'home'
-        }),
-        href: item.url
-      {
-        if item.icon != null {
-          tag 'img' with class: 'a-icon', src: item.icon;
-        }
-
-        write item.text;
-      }
-    }
-  };
-}
 
 Web.view(fn() => html {
-  write Cover.drawCover(
-    brand: 'Francessco.us',
-    nav: drawNav(),
-    heading: 'Hi There!',
-    content: html {
-      write Cover.drawContentLine(`
-        I'm Ethan Lafrenais, a programmer who is in love with computers!
-      `);
+  @ 'div' :: class: 'background' { }
 
-      write Cover.drawContentLine(`
-        I love developing games and other cool applications,
-        <a href="/projects/">check them out here</a>!
-      `);
-    },
-    footer: `&copy; 2018 Ethan Lafrenais`
-  );
+  @ 'div' :: class: 'landing-block' {
+    @ 'div' :: class: 'container' {
+      @ 'h1' :: class: 'title' { <: 'Francessco.us'; }
+
+      @ 'div' :: class: 'content' {
+        @ 'div' :: class: 'content-card' {
+          @ 'h2' :: class: 'heading' { <: "Hi there, I'm Ethan Lafrenais!"; }
+
+          @ 'div' :: class: 'line' {
+            <: 'I am a Software Developer who loves to learn and build projects to solve problems!';
+          }
+        }
+
+        @ 'div' :: class: 'landing-buttons' {
+          @ 'a' :: class: 'landing-button', href: 'https://github.com/Francessco121' {
+            @ 'img' :: src: '/images/GitHub-Mark-Light-32px.png';
+            @ 'span' { <: 'GitHub'; }
+          }
+
+          @ 'a' :: class: 'landing-button', href: '#projects' {
+            @ 'span' { <: 'View Projects'; }
+          }
+        }
+      }
+    } // .container
+  } // .landing-block
+
+  @ 'div' :: class: 'content-block' {
+    @ 'div' :: class: 'container' {
+      @ 'h1' :: class: 'projects-title', id: 'projects' { <: 'My Projects'; }
+
+      foreach i, project in ProjectsData.projects {
+        <: ProjectCard.drawProjectCard(project);
+      }
+    }
+  }
 });

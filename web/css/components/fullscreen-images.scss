@@ -15,7 +15,7 @@
 }
 
 .fullscreen-image-wrapper {
-	background-color: rgba(0, 0, 0, 0.95);
+	background-color: rgba(0, 0, 0, 0.85);
 	z-index: 9999;
 	display: none;
 
@@ -27,15 +27,22 @@
 }
 .fullscreen-image-wrapper .close {
 	color: rgba(255, 255, 255, 0.9);
-    opacity: 1;
-    font-size: 48px;
-    margin-right: 25px;
-    margin-top: 10px;
+	opacity: 1;
+	font-size: 48px;
+	margin-right: 25px;
+	margin-top: 10px;
 	position: relative;
 	right: 25%;
 	z-index: 100000;
 	text-shadow: 1px 1px black;
 	outline: none !important;
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+	float: right;
+	font-weight: 800;
+	line-height: 1;
 }
 .fullscreen-image-wrapper .close:hover {
 	color: rgba(255, 255, 255, 1);

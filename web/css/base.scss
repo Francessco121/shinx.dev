@@ -1,0 +1,107 @@
+@import 'package:francessco_us/styles/normalize';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // Bootstrap v4 font stack
+  font-family:
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue", Arial, sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  // Base font-color
+  color: #333;
+
+  // Base font-size
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+
+  &:hover {
+    color: #014c8c;
+    text-decoration: underline;
+  }
+}
+
+.text-muted {
+  color: #636c72;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.body-view-wrapper {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #ececec;
+
+  padding: 16px;
+  box-sizing: border-box;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+
+  > .footer-container {
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

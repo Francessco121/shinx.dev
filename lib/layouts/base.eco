@@ -1,0 +1,42 @@
+Web.view(fn() => html {
+  <: '<!doctype html>';
+
+  @ 'html' :: lang: 'en' {
+    @ 'head' {
+      @ 'meta' :: charset: 'utf-8';
+      @ 'meta' :: name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no';
+      @ 'meta' :: name: 'author', content: 'Ethan Lafrenais';
+
+      @ 'title' { <: 'Francessco.us'; }
+
+      @ 'link' :: href: '/css/base.css', rel: 'stylesheet', type: 'text/css';
+
+      <: Web.drawStack('css');
+    }
+
+    @ 'body' {
+      <: Web.drawStack('rootBody');
+
+      @ 'div' :: class: 'body-container' {
+        @ 'div' :: class: 'body-view-wrapper' {
+          <: Web.drawView();
+        }
+      
+        // Footer
+        @ 'footer' :: class: 'footer' {
+          @ 'div' :: class: 'footer-container' {
+            @ 'span' { <: `&copy; 2018 Ethan Lafrenais`; }
+          }
+        }
+      }
+
+      // jQuery slim
+      @ 'script' ::
+        src: '/js/jquery-3.3.1.slim.min.js',
+        crossorigin: 'anonymous'
+      { }
+
+      <: Web.drawStack('js');
+    }
+  }
+});

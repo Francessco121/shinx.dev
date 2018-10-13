@@ -1,0 +1,50 @@
+pub var projects = [
+  {
+    id: 'eco',
+    name: 'Eco',
+    description: 'A programming language for generating static HTML',
+    url: 'https://github.com/Francessco121/eco',
+    card: {
+      backgroundImage: {
+        url: '/images/projects/eco/card-background.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'aos',
+    name: 'Ace of Spades Clone',
+    description: 'A recreation of the game "Ace of Spades Classic"',
+    url: '/projects/ace-of-spades-clone',
+    card: {
+      backgroundImage: {
+        url: '/images/projects/ace-of-spades-clone/card-background.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'hlml',
+    name: 'HLML Toolkit',
+    description: 'A set of tools and languages for playing the game "Much Assembly Required"',
+    url: 'https://github.com/Francessco121/HlmlToolkit',
+    card: {
+      backgroundImage: {
+        url: '/images/projects/hlml-toolkit/card-background.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'discore',
+    name: 'Discore',
+    description: 'A .NET Standard interface for the Discord API designed for creating bots',
+    url: '/projects/discore',
+    card: {
+      backgroundColor: 'rgb(114, 137, 218)', // Discord Blurple
+      backgroundImage: {
+        url: '/images/projects/discore/discord-logo.png'
+      }
+    }
+  }
+];

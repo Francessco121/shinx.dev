@@ -1,0 +1,145 @@
+import '../data/nav.eco' as NavData;
+import '../data/projects.eco' as ProjectsData;
+import 'base.eco' as Layout;
+
+Web.inherit(Layout, fn() => {
+  title: Web.layout()['title']
+});
+
+Web.stack('css', html {
+  @ 'link' :: href: '/css/project-base.css', rel: 'stylesheet', type: 'text/css';
+});
+
+Web.stack('js', html {
+  @ 'script' :: src: '/js/components/mobile-nav-pane.js' { }
+});
+
+fn drawDesktopNavLinks() => html {
+  @ 'ul' :: class: 'header-nav-links' {
+    foreach i, item in NavData.nav {
+      @ 'li' {
+        @ 'a' :: href: item.url {
+          if item.iconUrl != null {
+            @ 'img' :: src: item.iconUrl;
+          }
+
+          @ 'span' { <: item.text; }
+        }
+      }
+    }
+  }
+};
+
+fn drawMobileNavPane(model) => html {
+  @ 'div' :: id: 'mobile-nav-pane' {
+    @ 'nav' {
+      @ 'button' ::
+        class: 'mobile-menu-button',
+        'data-toggle': 'mobile-nav-pane'
+      {
+        @ 'span' { }
+      }
+
+      @ 'div' :: class: 'mobile-header-title' {
+        @ 'a' :: href: '/' { <: 'Francessco.us'; }
+      }
+      
+      @ 'div' :: class: 'scroll-section' {
+        @ 'ul' :: class: 'mobile-header-nav-links' {
+          foreach i, item in NavData.nav {
+            @ 'li' {
+              @ 'a' :: href: item.url {
+                if item.iconUrl != null {
+                  @ 'img' :: src: item.iconUrl;
+                }
+
+                @ 'span' { <: item.text; }
+              }
+            }
+          }
+        }
+
+        @ 'div' :: class: 'mobile-header-title' {
+          @ 'a' :: href: '/' { <: 'Projects'; }
+        }
+
+        @ 'ul' :: class: 'mobile-header-nav-links' {
+          foreach i, project in ProjectsData.projects {
+            @ 'li' {
+              @ 'a' :: 
+                href: project.url,
+                class: Web.makeClass({
+                  'active': project.id == model.projectId
+                })
+              {
+                @ 'span' { <: project.name; }
+              }
+            }
+          }
+        }
+      } // .scroll-section
+    } // nav
+  } // #mobile-nav-pane
+
+  @ 'div' :: id: 'mobile-nav-pane-cancel' { }
+};
+
+fn drawSideNav(model) => html {
+  @ 'nav' :: class: 'side-nav' {
+    @ 'ul' {
+      @ 'li' {
+        @ 'a' :: href: '/#projects' {
+          <: 'All Projects';
+        }
+      }
+
+      foreach i, project in ProjectsData.projects {
+        @ 'li' {
+          @ 'a' :: 
+            href: project.url,
+            class: Web.makeClass({
+              'active': project.id == model.projectId
+            })
+          {
+            <: project.name;
+          }
+        }
+      }
+    } // ul
+  } // .side-nav
+};
+
+Web.view(fn() => html {
+  var model = Web.layout();
+
+  <: drawMobileNavPane(model);
+
+  @ 'header' {
+    @ 'nav' {
+      @ 'button' ::
+        class: 'mobile-menu-button',
+        'data-toggle': 'mobile-nav-pane'
+      {
+        @ 'span' { }
+      }
+
+      @ 'div' :: class: 'header-title' {
+        @ 'a' :: href: '/' { <: 'Francessco.us'; }
+      }
+
+      @ 'div' :: class: 'mobile-header-title' {
+        <: model['title'];
+      }
+      
+      <: drawDesktopNavLinks();
+    }
+  }
+
+  @ 'div' :: class: 'project-content-wrapper' {
+    <: drawSideNav(model);
+
+    @ 'div' {
+      <: Web.drawView();
+    }
+  }
+});
