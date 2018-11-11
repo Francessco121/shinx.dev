@@ -158,9 +158,11 @@ packages:
   eco:
     dependency: "direct dev"
     description:
-      path: "..\\eco"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "63a1cf5a7e154455776a8f8e9986c083848d9543"
+      url: "https://github.com/Francessco121/eco.git"
+    source: git
     version: "0.0.0"
   fixnum:
     dependency: transitive

@@ -14,7 +14,3 @@ dev_dependencies:
     git:
       url: https://github.com/dart-league/sass_builder.git
       ref: e76da918cf27bf14e324b2343ff4f7ee38e98693
-
-dependency_overrides:
-  eco:
-    path: ../eco
