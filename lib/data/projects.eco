@@ -24,13 +24,13 @@ pub var projects = [
     }
   },
   {
-    id: 'hlml',
-    name: 'HLML Toolkit',
-    description: 'A set of tools and languages for playing the game "Much Assembly Required"',
-    url: 'https://github.com/Francessco121/HlmlToolkit',
+    id: 'mar-toolkit',
+    name: 'MAR Toolkit',
+    description: 'A set of tools for playing the game "Much Assembly Required"',
+    url: 'https://github.com/Francessco121/mar-toolkit',
     card: {
       backgroundImage: {
-        url: '/images/projects/hlml-toolkit/card-background.png',
+        url: '/images/projects/mar-toolkit/card-background.png',
         size: 'cover'
       }
     }
