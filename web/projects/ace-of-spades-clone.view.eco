@@ -6,11 +6,11 @@ Web.inherit('package:francessco_us/layouts/project_base.eco', {
 });
 
 Web.stack('css', html {
-  @ 'link' :: href: '/css/components/fullscreen-images.css', rel: 'stylesheet', type: 'text/css';
+  @link href: '/css/components/fullscreen-images.css', rel: 'stylesheet', type: 'text/css';
 });
 
 Web.stack('js', html {
-  @ 'script' :: src: '/js/components/fullscreen-images.js' { }
+  @script src: '/js/components/fullscreen-images.js' { }
 });
 
 Web.stack('rootBody', `
@@ -24,7 +24,7 @@ Web.stack('rootBody', `
 `);
 
 fn drawVideos() => html {
-  @ 'h3' { <: 'Videos'; }
+  @h3 { <: 'Videos'; }
 
   <: `
     <small class="d-md-none " style="display: inline-block; margin-bottom: 5px">
@@ -32,11 +32,11 @@ fn drawVideos() => html {
     </small>
   `;
 
-  @ 'div' :: class: 'card-columns video-card-columns' {
+  @div class: 'card-columns video-card-columns' {
     foreach i, video in Data.videos {
-      @ 'div' :: class: 'card' {
-        @ 'div' :: class: 'embed-responsive embed-responsive-16by9' {
-          @ 'iframe' ::
+      @div class: 'card' {
+        @div class: 'embed-responsive embed-responsive-16by9' {
+          @iframe
             class: video.desc == null ? 'card-img' : 'card-img-top',
             src: video.url,
             allowfullscreen: true
@@ -44,8 +44,8 @@ fn drawVideos() => html {
         }
 
         if video.desc != null {
-          @ 'div' :: class: 'card-block' {
-            @ 'p' :: class: 'card-text' {
+          @div class: 'card-block' {
+            @p class: 'card-text' {
               <: video.desc;
             }
           }
@@ -58,24 +58,24 @@ fn drawVideos() => html {
 fn drawScreenshots() => html {
   <: `<h3 style="margin-top: 15px">Screenshots</h3>`;
 
-  @ 'div' :: class: 'card-columns' {
+  @div class: 'card-columns' {
     foreach i, screenshot in Data.screenshots {
-      @ 'div' :: class: 'card' {
+      @div class: 'card' {
         var imgUrl = Data.screenshotsDir .. screenshot.url;
 
         var onClick = 'fullscreenImages.showImage(\'' .. imgUrl .. '\')';
 
-        @ 'img' ::
-          style: 'cursor: zoom-in',
-          class: Web.makeClass({
-            'card-img': screenshot.desc == null,
-            'card-img-top': screenshot.desc != null
-          }),
+        @img
+          style: { 'cursor': 'zoom-in' },
+          class: [
+            'card-img' when screenshot.desc == null,
+            'card-img-top' when screenshot.desc != null
+          ],
           src: imgUrl,
           onclick: onClick;
 
         if screenshot.desc != null {
-          @ 'div' :: class: 'card-block' {
+          @div class: 'card-block' {
             <: screenshot.desc;
           }
         }

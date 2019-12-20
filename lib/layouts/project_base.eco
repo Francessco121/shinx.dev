@@ -8,23 +8,23 @@ Web.inherit('base.eco', {
 });
 
 Web.stack('css', html {
-  @ 'link' :: href: '/css/project-base.css', rel: 'stylesheet', type: 'text/css';
+  @link href: '/css/project-base.css', rel: 'stylesheet', type: 'text/css';
 });
 
 Web.stack('js', html {
-  @ 'script' :: src: '/js/components/mobile-nav-pane.js' { }
+  @script src: '/js/components/mobile-nav-pane.js' { }
 });
 
 fn drawDesktopNavLinks() => html {
-  @ 'ul' :: class: 'header-nav-links' {
+  @ul class: 'header-nav-links' {
     foreach i, item in NavData.nav {
-      @ 'li' {
-        @ 'a' :: href: item.url {
+      @li {
+        @a href: item.url {
           if item.iconUrl != null {
-            @ 'img' :: src: item.iconUrl;
+            @img src: item.iconUrl;
           }
 
-          @ 'span' { <: item.text; }
+          @span { <: item.text; }
         }
       }
     }
@@ -32,48 +32,48 @@ fn drawDesktopNavLinks() => html {
 };
 
 fn drawMobileNavPane() => html {
-  @ 'div' :: id: 'mobile-nav-pane' {
-    @ 'nav' {
-      @ 'button' ::
+  @div id: 'mobile-nav-pane' {
+    @nav {
+      @button
         class: 'mobile-menu-button',
-        'data-toggle': 'mobile-nav-pane'
+        data-toggle: 'mobile-nav-pane'
       {
-        @ 'span' { }
+        @span { }
       }
 
-      @ 'div' :: class: 'mobile-header-title' {
-        @ 'a' :: href: '/' { <: 'Francessco.us'; }
+      @div class: 'mobile-header-title' {
+        @a href: '/' { <: 'Francessco.us'; }
       }
       
-      @ 'div' :: class: 'scroll-section' {
-        @ 'ul' :: class: 'mobile-header-nav-links' {
+      @div class: 'scroll-section' {
+        @ul class: 'mobile-header-nav-links' {
           foreach i, item in NavData.nav {
-            @ 'li' {
-              @ 'a' :: href: item.url {
+            @li {
+              @a href: item.url {
                 if item.iconUrl != null {
-                  @ 'img' :: src: item.iconUrl;
+                  @img src: item.iconUrl;
                 }
 
-                @ 'span' { <: item.text; }
+                @span { <: item.text; }
               }
             }
           }
         }
 
-        @ 'div' :: class: 'mobile-header-title' {
-          @ 'a' :: href: '/' { <: 'Projects'; }
+        @div class: 'mobile-header-title' {
+          @a href: '/' { <: 'Projects'; }
         }
 
-        @ 'ul' :: class: 'mobile-header-nav-links' {
+        @ul class: 'mobile-header-nav-links' {
           foreach i, project in ProjectsData.projects {
-            @ 'li' {
-              @ 'a' :: 
+            @li {
+              @a
                 href: project.url,
                 class: Web.makeClass({
                   'active': project.id == model.projectId
                 })
               {
-                @ 'span' { <: project.name; }
+                @span { <: project.name; }
               }
             }
           }
@@ -82,21 +82,21 @@ fn drawMobileNavPane() => html {
     } // nav
   } // #mobile-nav-pane
 
-  @ 'div' :: id: 'mobile-nav-pane-cancel' { }
+  @div id: 'mobile-nav-pane-cancel' { }
 };
 
 fn drawSideNav() => html {
-  @ 'nav' :: class: 'side-nav' {
-    @ 'ul' {
-      @ 'li' {
-        @ 'a' :: href: '/#projects' {
+  @nav class: 'side-nav' {
+    @ul {
+      @li {
+        @a href: '/#projects' {
           <: 'All Projects';
         }
       }
 
       foreach i, project in ProjectsData.projects {
-        @ 'li' {
-          @ 'a' :: 
+        @li {
+          @a
             href: project.url,
             class: Web.makeClass({
               'active': project.id == model.projectId
@@ -113,20 +113,20 @@ fn drawSideNav() => html {
 Web.view(html {
   <: drawMobileNavPane();
 
-  @ 'header' {
-    @ 'nav' {
-      @ 'button' ::
+  @header {
+    @nav {
+      @button
         class: 'mobile-menu-button',
-        'data-toggle': 'mobile-nav-pane'
+        data-toggle: 'mobile-nav-pane'
       {
-        @ 'span' { }
+        @span { }
       }
 
-      @ 'div' :: class: 'header-title' {
-        @ 'a' :: href: '/' { <: 'Francessco.us'; }
+      @div class: 'header-title' {
+        @a href: '/' { <: 'Francessco.us'; }
       }
 
-      @ 'div' :: class: 'mobile-header-title' {
+      @div class: 'mobile-header-title' {
         <: model['title'];
       }
       
@@ -134,10 +134,10 @@ Web.view(html {
     }
   }
 
-  @ 'div' :: class: 'project-content-wrapper' {
+  @div class: 'project-content-wrapper' {
     <: drawSideNav();
 
-    @ 'div' {
+    @div {
       <: Web.drawView();
     }
   }

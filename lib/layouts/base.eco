@@ -3,45 +3,40 @@ Web.view(html {
 
   <: '<!doctype html>';
 
-  @ 'html' :: lang: 'en' {
-    @ 'head' {
-      @ 'meta' :: charset: 'utf-8';
-      @ 'meta' :: name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no';
-      @ 'meta' :: name: 'author', content: 'Ethan Lafrenais';
+  @html lang: 'en' {
+    @head {
+      @meta charset: 'utf-8';
+      @meta name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no';
+      @meta name: 'author', content: 'Ethan Lafrenais';
 
-      @ 'title' {
-        var title = model['title'];
-
-        if title != null {
-          <: title .. ' - ';
-        }
-        
-        <: 'Francessco.us';
+      @title {
+        <: model['title'] .. ` - ` when model['title'] != null;
+        <: `Francessco.us`;
       }
 
-      @ 'link' :: href: '/css/base.css', rel: 'stylesheet', type: 'text/css';
+      @link href: '/css/base.css', rel: 'stylesheet', type: 'text/css';
 
       <: Web.drawStack('css');
     }
 
-    @ 'body' {
+    @body {
       <: Web.drawStack('rootBody');
 
-      @ 'div' :: class: 'body-container' {
-        @ 'div' :: class: 'body-view-wrapper' {
+      @div class: 'body-container' {
+        @div class: 'body-view-wrapper' {
           <: Web.drawView();
         }
       
         // Footer
-        @ 'footer' :: class: 'footer' {
-          @ 'div' :: class: 'footer-container' {
-            @ 'span' { <: `&copy; 2018 Ethan Lafrenais`; }
+        @footer class: 'footer' {
+          @div class: 'footer-container' {
+            @span { <: `&copy; 2019 Ethan Lafrenais`; }
           }
         }
       }
 
       // jQuery slim
-      @ 'script' ::
+      @script
         src: '/js/jquery-3.3.1.slim.min.js',
         crossorigin: 'anonymous'
       { }

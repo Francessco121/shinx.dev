@@ -4,44 +4,44 @@ import 'package:francessco_us/data/projects.eco' as ProjectsData;
 Web.inherit('package:francessco_us/layouts/base.eco');
 
 Web.stack('css', html {
-  @ 'link' :: href: '/css/home.css', rel: 'stylesheet', type: 'text/css';
+  @link href: '/css/home.css', rel: 'stylesheet', type: 'text/css';
 
   <: ProjectCard.drawCssDependencies();
 });
 
 Web.view(html {
-  @ 'div' :: class: 'background' { }
+  @div class: 'background' { }
 
-  @ 'div' :: class: 'landing-block' {
-    @ 'div' :: class: 'container' {
-      @ 'h1' :: class: 'title' { <: 'Francessco.us'; }
+  @div class: 'landing-block' {
+    @div class: 'container' {
+      @h1 class: 'title' { <: 'Francessco.us'; }
 
-      @ 'div' :: class: 'content' {
-        @ 'div' :: class: 'content-card' {
-          @ 'h2' :: class: 'heading' { <: "Hi there, I'm Ethan Lafrenais!"; }
+      @div class: 'content' {
+        @div class: 'content-card' {
+          @h2 class: 'heading' { <: "Hi there, I'm Ethan Lafrenais!"; }
 
-          @ 'div' :: class: 'line' {
+          @div class: 'line' {
             <: 'I am a Software Developer who loves to learn and build projects to solve problems!';
           }
         }
 
-        @ 'div' :: class: 'landing-buttons' {
-          @ 'a' :: class: 'landing-button', href: 'https://github.com/Francessco121' {
-            @ 'img' :: src: '/images/GitHub-Mark-Light-32px.png';
-            @ 'span' { <: 'GitHub'; }
+        @div class: 'landing-buttons' {
+          @a class: 'landing-button', href: 'https://github.com/Francessco121' {
+            @img src: '/images/GitHub-Mark-Light-32px.png';
+            @span { <: 'GitHub'; }
           }
 
-          @ 'a' :: class: 'landing-button', href: '#projects' {
-            @ 'span' { <: 'View Projects'; }
+          @a class: 'landing-button', href: '#projects' {
+            @span { <: 'View Projects'; }
           }
         }
       }
     } // .container
   } // .landing-block
 
-  @ 'div' :: class: 'content-block' {
-    @ 'div' :: class: 'container' {
-      @ 'h1' :: class: 'projects-title', id: 'projects' { <: 'My Projects'; }
+  @div class: 'content-block' {
+    @div class: 'container' {
+      @h1 class: 'projects-title', id: 'projects' { <: 'My Projects'; }
 
       foreach i, project in ProjectsData.projects {
         <: ProjectCard.drawProjectCard(project);
