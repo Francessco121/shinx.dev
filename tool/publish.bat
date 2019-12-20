@@ -6,17 +6,22 @@ cd ..
 
 rem Build the project
 echo Building...
-call pub run build_runner build -o build -r
+call pub run build_runner build -o web:build -r
 
 rem Save the dev commit hash for later
 for /F "delims=" %%i in ('git rev-parse HEAD') do set commitHash=%%i
 
 rem Enter build web directory
-cd build\web
+cd build
 
-rem Delete unnecessary packages sym link
-echo Deleting packages sym link...
-rmdir packages
+rem Delete unnecessary packages folder
+echo Deleting packages folder...
+rmdir /Q /S packages
+
+rem Delete unnecessary build metadata
+echo Deleting build metadata...
+del .build.manifest
+del .packages
 
 rem Initialize a git repo
 echo Initializing git repository...
