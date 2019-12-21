@@ -98,7 +98,7 @@ Web.view(html {
     </p>
 
     <p>
-      "Ace of Spades Clone" is my personal recreation of the game <a href="http://buildandshoot.com/">Ace of Spades Classic</a>.
+      "Ace of Spades Clone" is my personal recreation of the game <a class="external-link" href="http://buildandshoot.com/">Ace of Spades Classic</a>.
     </p>
 
     <p>
@@ -110,7 +110,7 @@ Web.view(html {
 
     <p>
       Since I'm not much of an artist, I did use some textures and recreated some models from the 
-      <a href="https://github.com/yvt/openspades">OpenSpades project</a>.
+      <a class="external-link" href="https://github.com/yvt/openspades">OpenSpades project</a>.
     </p>
 
     <h3>Details</h3>

@@ -1,36 +1,18 @@
 pub var projects = [
   {
-    id: 'eco',
-    name: 'Eco',
-    description: 'A programming language for generating static websites',
-    url: 'https://github.com/Francessco121/eco',
-    card: {
-      backgroundImage: {
-        url: '/images/projects/eco/card-background.png',
-        size: 'cover'
-      }
-    }
-  },
-  {
     id: 'aos',
     name: 'Ace of Spades Clone',
-    description: 'A recreation of the game "Ace of Spades Classic"',
+    description: 'A personal recreation of the game "Ace of Spades" (Classic)',
     url: '/projects/ace-of-spades-clone',
+    banner: {
+      backgroundImage: {
+        url: '/images/projects/ace-of-spades-clone/banner.png',
+        size: 'cover'
+      }
+    },
     card: {
       backgroundImage: {
         url: '/images/projects/ace-of-spades-clone/card-background.png',
-        size: 'cover'
-      }
-    }
-  },
-  {
-    id: 'mar-toolkit',
-    name: 'MAR Toolkit',
-    description: 'A set of tools for playing the game "Much Assembly Required"',
-    url: 'https://github.com/Francessco121/mar-toolkit',
-    card: {
-      backgroundImage: {
-        url: '/images/projects/mar-toolkit/card-background.png',
         size: 'cover'
       }
     }
@@ -40,10 +22,68 @@ pub var projects = [
     name: 'Discore',
     description: 'A .NET Standard interface for the Discord API designed for creating bots',
     url: '/projects/discore',
-    card: {
-      backgroundColor: 'rgb(114, 137, 218)', // Discord Blurple
+    banner: {
       backgroundImage: {
-        url: '/images/projects/discore/discord-logo.png'
+        url: '/images/projects/discore/banner.png',
+        size: 'cover'
+      }
+    }
+    card: {
+      backgroundImage: {
+        url: '/images/projects/discore/banner.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'mar-toolkit',
+    name: 'MAR Toolkit',
+    description: 'A set of development tools for playing the game "Much Assembly Required"',
+    url: 'https://github.com/Francessco121/mar-toolkit',
+    urlExternal: true,
+    card: {
+      backgroundImage: {
+        url: '/images/projects/mar-toolkit/banner.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'eco',
+    name: 'Eco',
+    description: 'A programming language for generating static websites',
+    url: 'https://github.com/Francessco121/eco',
+    urlExternal: true,
+    card: {
+      backgroundImage: {
+        url: '/images/projects/eco/banner.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'msal-js-dart',
+    name: 'MSAL.js for Dart',
+    description: 'A Dart wrapper for the Microsoft Authentication Library for JavaScript',
+    url: 'https://github.com/milestonetg/msal-js-dart',
+    urlExternal: true,
+    card: {
+      backgroundImage: {
+        url: '/images/projects/msal-js-dart/banner.png',
+        size: 'cover'
+      }
+    }
+  },
+  {
+    id: 'embedded-config',
+    name: 'Embedded Config',
+    description: 'A Dart package for embedding application configs into source-code at build-time',
+    url: 'https://github.com/Francessco121/dart-embedded-config',
+    urlExternal: true,
+    card: {
+      backgroundImage: {
+        url: '/images/projects/embedded-config/banner.png',
+        size: 'cover'
       }
     }
   }

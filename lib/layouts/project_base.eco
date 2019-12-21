@@ -24,7 +24,11 @@ fn drawDesktopNavLinks() => html {
             @img src: item.iconUrl;
           }
 
-          @span { <: item.text; }
+          @span 
+            class: 'external-link-white' when item.urlExternal == true 
+          { 
+            <: item.text; 
+          }
         }
       }
     }
@@ -54,7 +58,11 @@ fn drawMobileNavPane() => html {
                   @img src: item.iconUrl;
                 }
 
-                @span { <: item.text; }
+                @span 
+                  class: 'external-link-white' when item.urlExternal == true 
+                { 
+                  <: item.text; 
+                }
               }
             }
           }
@@ -73,7 +81,11 @@ fn drawMobileNavPane() => html {
                   'active': project.id == model.projectId
                 })
               {
-                @span { <: project.name; }
+                @span 
+                  class: 'external-link-white' when project.urlExternal == true 
+                { 
+                  <: project.name; 
+                }
               }
             }
           }
@@ -98,9 +110,11 @@ fn drawSideNav() => html {
         @li {
           @a
             href: project.url,
-            class: Web.makeClass({
-              'active': project.id == model.projectId
-            })
+            class: [
+              'active' when project.id == model.projectId,
+              'external-link' when project.urlExternal == true 
+            ],
+            title: project.description
           {
             <: project.name;
           }
@@ -108,6 +122,39 @@ fn drawSideNav() => html {
       }
     } // ul
   } // .side-nav
+};
+
+fn drawProjectBanner() => html {
+  // Get the project
+  var project;
+
+  foreach i, _project in ProjectsData.projects {
+    if _project.id == model.projectId {
+      project = _project;
+      break;
+    }
+  }
+
+  // Get the project banner settings
+  var banner = project.banner;
+
+  if banner != null {
+    // Draw a banner
+    var bannerStyle = Web.makeStyle({
+      'background-color': banner.backgroundColor
+    });
+
+    var backgroundStyle = banner.backgroundImage == null
+      ? null
+      :  Web.makeStyle({
+        'background-image': "url('" .. banner.backgroundImage.url .. "')",
+        'background-size': banner.backgroundImage.size
+      });
+
+    @div class: 'project-banner', style: bannerStyle {
+      @div class: 'project-banner-background', style: backgroundStyle { }
+    }
+  }
 };
 
 Web.view(html {
@@ -138,6 +185,7 @@ Web.view(html {
     <: drawSideNav();
 
     @div {
+      <: drawProjectBanner();
       <: Web.drawView();
     }
   }

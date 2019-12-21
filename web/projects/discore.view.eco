@@ -25,8 +25,8 @@ Web.view(`
 
   <p>
     Discore is a light-weight 
-    <a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a>
-    library designed for creating <a href="https://discordapp.com/">Discord</a> bots.
+    <a class="external-link"  href="https://docs.microsoft.com/en-us/dotnet/articles/standard/library">.NET Standard</a>
+    library designed for creating <a class="external-link"  href="https://discordapp.com/">Discord</a> bots.
   </p>
 
   <p>
@@ -35,7 +35,7 @@ Web.view(`
   </p>
 
   <p>
-    You can check out <a href="https://github.com/BundledSticksInkorperated/Discore">Discore on GitHub here</a>.
+    You can check out <a class="external-link"  href="https://github.com/BundledSticksInkorperated/Discore">Discore on GitHub</a>.
   </p>
 
   <h3>Why another .NET Discord Library?</h3>

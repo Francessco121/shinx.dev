@@ -28,11 +28,11 @@ Web.view(html {
         @div class: 'landing-buttons' {
           @a class: 'landing-button', href: 'https://github.com/Francessco121' {
             @img src: '/images/GitHub-Mark-Light-32px.png';
-            @span { <: 'GitHub'; }
+            @span class: 'external-link-white' { <: 'GitHub'; }
           }
 
           @a class: 'landing-button', href: '#projects' {
-            @span { <: 'View Projects'; }
+            @span { <: 'My Projects'; }
           }
         }
       }

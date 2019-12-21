@@ -19,7 +19,15 @@ pub fn drawProjectCard(project) => html {
   @div class: 'project-card', style: cardStyle {
     @div class: 'project-card-background', style: backgroundStyle {
       @a class: 'project-card-cover', href: project.url {
-        @span class: 'project-card-title' { <: project.name; }
+        @span 
+          class: [
+            'project-card-title',
+            'external-link-white' when project.urlExternal == true
+          ]
+        { 
+          <: project.name; 
+        }
+
         @span class: 'project-card-description' { <: project.description; }
       }
     } // .project-card-background

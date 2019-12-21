@@ -9,6 +9,7 @@ pub var nav = [
   },
   {
     url: 'https://github.com/Francessco121',
+    urlExternal: true,
     text: 'GitHub Profile',
     iconUrl: '/images/GitHub-Mark-Light-32px.png'
   }

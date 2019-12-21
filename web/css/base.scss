@@ -105,3 +105,34 @@ footer {
     margin-right: auto;
   }
 }
+
+.external-link,
+.external-link-white {
+  position: relative;
+}
+
+@mixin external-link {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+
+  margin-left: 4px;
+  margin-bottom: calc(1em - 8px);
+  vertical-align: bottom;
+
+  background-size: cover;
+ 
+  content: '';
+}
+
+.external-link::after {
+  @include external-link;
+
+  background-image: url(/images/external-link.png);
+}
+
+.external-link-white::after {
+  @include external-link;
+
+  background-image: url(/images/external-link-white.png);
+}

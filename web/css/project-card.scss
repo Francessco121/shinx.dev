@@ -7,6 +7,9 @@
 
   border-radius: 2px;
 
+  box-shadow: 0 0 3px rgba(0, 0, 0, .14), 
+              0 3px 6px rgba(0, 0, 0, .28);
+
   @media (max-width: 1220px) {
     border-radius: 0px;
   }
@@ -47,7 +50,7 @@
         font-size: 5rem;
         font-weight: normal;
 
-        padding: 0 16px 0 16px;
+        padding: 0 32px 0 32px;
 
         text-align: center;
 
@@ -70,7 +73,7 @@
 
         margin-top: 8px;
 
-        padding: 0 16px 0 16px;
+        padding: 0 32px 0 32px;
 
         text-align: center;
 
