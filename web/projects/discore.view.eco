@@ -1,5 +1,10 @@
+import 'package:francessco_us/data/projects.eco' as ProjectsData;
+
+var project = ProjectsData.getProjectWithId('discore');
+
 Web.inherit('package:francessco_us/layouts/project_base.eco', {
-  title: 'Discore',
+  title: project.name,
+  description: project.description,
   projectId: 'discore'
 });
 

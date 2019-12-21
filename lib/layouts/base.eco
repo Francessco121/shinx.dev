@@ -9,6 +9,12 @@ Web.view(html {
       @meta name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no';
       @meta name: 'author', content: 'Ethan Lafrenais';
 
+      @meta property: 'og:title', content: model['title'] ?? 'Francessco.us';
+      @meta property: 'og:image', content: '/images/icon.png';
+      @meta 
+        property: 'og:description', 
+        content: model['description'] ?? 'The personal website of Ethan Lafrenais.';
+
       @title {
         <: model['title'] .. ` - ` when model['title'] != null;
         <: `Francessco.us`;

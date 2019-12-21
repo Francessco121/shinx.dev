@@ -1,7 +1,11 @@
+import 'package:francessco_us/data/projects.eco' as ProjectsData;
 import 'package:francessco_us/data/projects/ace-of-spades-clone.eco' as Data;
 
+var project = ProjectsData.getProjectWithId('aos');
+
 Web.inherit('package:francessco_us/layouts/project_base.eco', {
-  title: 'Ace of Spades Clone',
+  title: project.name,
+  description: project.description,
   projectId: 'aos'
 });
 

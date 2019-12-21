@@ -88,3 +88,11 @@ pub var projects = [
     }
   }
 ];
+
+pub fn getProjectWithId(id) {
+  foreach i, project in projects {
+    if project.id == id {
+      return project;
+    }
+  }
+}

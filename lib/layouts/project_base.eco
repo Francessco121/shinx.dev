@@ -4,7 +4,8 @@ import '../data/projects.eco' as ProjectsData;
 var model = Web.getModel() ?? {};
 
 Web.inherit('base.eco', {
-  title: model['title']
+  title: model['title'],
+  description: model['description']
 });
 
 Web.stack('css', html {
@@ -126,14 +127,7 @@ fn drawSideNav() => html {
 
 fn drawProjectBanner() => html {
   // Get the project
-  var project;
-
-  foreach i, _project in ProjectsData.projects {
-    if _project.id == model.projectId {
-      project = _project;
-      break;
-    }
-  }
+  var project = ProjectsData.getProjectWithId(model.projectId);
 
   // Get the project banner settings
   var banner = project.banner;
