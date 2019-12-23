@@ -62,30 +62,28 @@ fn drawVideos() => html {
 fn drawScreenshots() => html {
   <: `<h3 style="margin-top: 15px">Screenshots</h3>`;
 
-  @div class: 'card-columns' {
-    foreach i, screenshot in Data.screenshots {
-      @div class: 'card' {
-        var imgUrl = Data.screenshotsDir .. screenshot.url;
+  foreach i, screenshot in Data.screenshots {
+    @div class: 'card' {
+      var imgUrl = Data.screenshotsDir .. screenshot.url;
 
-        var onClick = 'fullscreenImages.showImage(\'' .. imgUrl .. '\')';
+      var onClick = 'fullscreenImages.showImage(\'' .. imgUrl .. '\')';
 
-        @img
-          style: { 'cursor': 'zoom-in' },
-          class: [
-            'card-img' when screenshot.desc == null,
-            'card-img-top' when screenshot.desc != null
-          ],
-          src: imgUrl,
-          onclick: onClick;
+      @img
+        style: { 'cursor': 'zoom-in' },
+        class: [
+          'card-img' when screenshot.desc == null,
+          'card-img-top' when screenshot.desc != null
+        ],
+        src: imgUrl,
+        onclick: onClick;
 
-        if screenshot.desc != null {
-          @div class: 'card-block' {
-            <: screenshot.desc;
-          }
+      if screenshot.desc != null {
+        @div class: 'card-block' {
+          <: screenshot.desc;
         }
-      } // .card
-    }
-  } // .card-columns
+      }
+    } // .card
+  }
 };
 
 Web.view(html {
@@ -98,6 +96,9 @@ Web.view(html {
     <p>
       <a href="https://github.com/Francessco121/AceOfSpadesClone" class="shield">
         <img src="https://img.shields.io/badge/source-GitHub-black.svg?style=flat-square&logo=github" />
+      </a>
+      <a href="https://github.com/Francessco121/AceOfSpadesClone/releases" class="shield">
+        <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Francessco121/AceOfSpadesClone?style=flat-square" />
       </a>
     </p>
 
@@ -115,6 +116,14 @@ Web.view(html {
     <p>
       Since I'm not much of an artist, I did use some textures and recreated some models from the 
       <a class="external-link" href="https://github.com/yvt/openspades">OpenSpades project</a>.
+    </p>
+
+    <h3>Download</h3>
+
+    <p>
+      If you would like to play around with the game by yourself or with friends, you can 
+      <a href="https://github.com/Francessco121/AceOfSpadesClone/releases">download a binary release of the game here</a>.
+      The game's world editor is also included, so you can even create your own maps to play on!
     </p>
 
     <h3>Details</h3>
@@ -143,6 +152,16 @@ Web.view(html {
         </ul>
       </li>
       <li>Each weapon/tool available in the classic game <small>(no classes though, everyone had every item)</small></li>
+    </ul>
+
+    <p>
+      Since leaving high school, I've made various improvements over the years to the game such as:
+    </p>
+
+    <ul>
+      <li>Voxel lighting <small>(caves/indoors get darker further from the outside)</small></li>
+      <li>Sounds <small>(from <a class="external-link" href="https://github.com/yvt/openspades">OpenSpades</a>)</small></li>
+      <li>Networking improvements</li>
     </ul>
   `;
 

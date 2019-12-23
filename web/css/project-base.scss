@@ -413,7 +413,7 @@ a.shield {
 }
 
 .card {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: .75rem;
 
@@ -422,6 +422,7 @@ a.shield {
 
   img {
     width: 100%;
+    display: block;
 
     &.card-img {
       border-radius: 4px;

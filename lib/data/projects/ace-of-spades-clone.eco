@@ -1,6 +1,20 @@
 pub var screenshotsDir = '/images/projects/ace-of-spades-clone/screenshots/';
 
 pub var screenshots = [
+  {
+    url: 'foundry.png',
+    desc: 'The map "Foundry".'
+  },
+  { url: 'foundry-gameplay-1.png' },
+  {
+    url: 'the-forest.png',
+    desc: 'The map "The Forest".'
+  },
+  { url: 'forest-gameplay-1.png' },
+  { 
+    url: 'cave-new-lighting.png',
+    desc: 'Showcase of the new voxel lighting added after the final school version of the game.'
+  },
   { 
     url: 'ctf-test.png',
     desc: 'Early CTF (capture the flag) test.'
@@ -38,18 +52,6 @@ pub var screenshots = [
   { 
     url: 'friends-house.png',
     desc: 'A house a friend of mine built during an early playtest.'
-  },
-  { 
-    url: 'link.png',
-    desc: 'Pixel art of Link done by a friend during a very early playtest.'
-  },
-  { 
-    url: 'young-luna.png',
-    desc: 'Pixel art trace of young Luna.'
-  },
-  { 
-    url: 'deadpool.png',
-    desc: 'Pixel art of Deadpool done by a friend.'
   },
   { 
     url: 'world-3-birds-eye-view.png',
@@ -104,12 +106,8 @@ pub var screenshots = [
     desc: 'Testing the map editor with some simple pixel art.'
   },
   { 
-    url: 'derpy.png',
-    desc: 'Pixel art trace of Derpy Hooves in the map editor.'
-  },
-  { 
-    url: 'twilight-sparkle.png',
-    desc: 'Pixel art trace of Twilight Sparkle in the map editor.'
+    url: 'link.png',
+    desc: 'Pixel art of Link done by a friend during a very early playtest.'
   }
 ];
 
