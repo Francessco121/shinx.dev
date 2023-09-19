@@ -47,7 +47,7 @@ fn drawMobileNavPane() => html {
       }
 
       @div class: 'mobile-header-title' {
-        @a href: '/' { <: 'Francessco.us'; }
+        @a href: '/' { <: 'shinx.dev'; }
       }
       
       @div class: 'scroll-section' {
@@ -164,7 +164,7 @@ Web.view(html {
       }
 
       @div class: 'header-title' {
-        @a href: '/' { <: 'Francessco.us'; }
+        @a href: '/' { <: 'shinx.dev'; }
       }
 
       @div class: 'mobile-header-title' {

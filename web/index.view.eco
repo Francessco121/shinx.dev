@@ -1,7 +1,7 @@
-import 'package:francessco_us/components/project_card.eco' as ProjectCard;
-import 'package:francessco_us/data/projects.eco' as ProjectsData;
+import 'package:shinx_dev/components/project_card.eco' as ProjectCard;
+import 'package:shinx_dev/data/projects.eco' as ProjectsData;
 
-Web.inherit('package:francessco_us/layouts/base.eco');
+Web.inherit('package:shinx_dev/layouts/base.eco');
 
 Web.stack('css', html {
   @link href: '/css/home.css', rel: 'stylesheet', type: 'text/css';
@@ -14,14 +14,17 @@ Web.view(html {
 
   @div class: 'landing-block' {
     @div class: 'container' {
-      @h1 class: 'title' { <: 'Francessco.us'; }
+      @h1 class: 'title' {
+        @img class: 'shinx', src: 'images/shinx.png';
+        <: 'shinx.dev'; 
+      }
 
       @div class: 'content' {
         @div class: 'content-card' {
-          @h2 class: 'heading' { <: "Hi there, I'm Ethan Lafrenais!"; }
+          @h2 class: 'heading' { <: "Hi there, I'm Ethan!"; }
 
           @div class: 'line' {
-            <: 'I am a Software Developer who loves to learn and build projects to solve problems!';
+            <: 'I am a Software Developer with a passion for learning and video games!';
           }
         }
 

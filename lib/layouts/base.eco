@@ -12,14 +12,14 @@ Web.view(html {
       @meta name: 'author', content: 'Ethan Lafrenais';
       @meta name: 'description', content: description;
 
-      @meta property: 'og:title', content: model['title'] ?? 'Francessco.us';
+      @meta property: 'og:title', content: model['title'] ?? 'shinx.dev';
       @meta property: 'og:image', content: '/images/icon.png';
       @meta property: 'og:description', content: description;
-      @meta property: 'og:site_name', content: 'Francessco.us';
+      @meta property: 'og:site_name', content: 'shinx.dev';
 
       @title {
         <: model['title'] .. ` - ` when model['title'] != null;
-        <: `Francessco.us`;
+        <: `shinx.dev`;
       }
 
       @link href: '/css/base.css', rel: 'stylesheet', type: 'text/css';
@@ -38,7 +38,7 @@ Web.view(html {
         // Footer
         @footer class: 'footer' {
           @div class: 'footer-container' {
-            @span { <: `&copy; 2019 Ethan Lafrenais`; }
+            @span { <: `&copy; 2023 Ethan Lafrenais`; }
           }
         }
       }

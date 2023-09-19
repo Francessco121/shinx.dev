@@ -1,9 +1,9 @@
-import 'package:francessco_us/data/projects.eco' as ProjectsData;
-import 'package:francessco_us/data/projects/ace-of-spades-clone.eco' as Data;
+import 'package:shinx_dev/data/projects.eco' as ProjectsData;
+import 'package:shinx_dev/data/projects/ace-of-spades-clone.eco' as Data;
 
 var project = ProjectsData.getProjectWithId('aos');
 
-Web.inherit('package:francessco_us/layouts/project_base.eco', {
+Web.inherit('package:shinx_dev/layouts/project_base.eco', {
   title: project.name,
   description: project.description,
   projectId: 'aos'

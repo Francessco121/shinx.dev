@@ -1,4 +1,4 @@
-# francessco121.github.io
+# shinx.dev
 
 Welcome to the source code of my personal website!
 
